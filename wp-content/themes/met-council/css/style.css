@@ -10557,9 +10557,6 @@ hr {
   .tax-campaign-status .campaign .wp-block-button .wp-block-button__link,
   .wp-block-button .tax-campaign-status .campaign .wp-block-button__link {
     max-width: 100%; }
-  .post-type-archive-campaign .campaign:last-child,
-  .tax-campaign-status .campaign:last-child {
-    margin-bottom: 1.5rem; }
 
 .post-type-archive-campaign .campaign + .campaign,
 .tax-campaign-status .campaign + .campaign {
@@ -10568,6 +10565,7 @@ hr {
 .post-type-archive-campaign .section-footer,
 .tax-campaign-status .section-footer {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 1.125rem; }
   .post-type-archive-campaign .section-footer a,
   .tax-campaign-status .section-footer a {
