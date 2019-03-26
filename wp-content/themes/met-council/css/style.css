@@ -10517,59 +10517,76 @@ hr {
             transform: none; } }
 
 /* Campaigns */
-.post-type-archive-campaign #archive-wrapper {
+.post-type-archive-campaign #archive-wrapper,
+.tax-campaign-status #archive-wrapper {
   background-color: #212121; }
 
-.post-type-archive-campaign .page-title {
+.post-type-archive-campaign .page-title,
+.tax-campaign-status .page-title {
   color: #fff; }
 
-.post-type-archive-campaign .campaign img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; }
-
-.post-type-archive-campaign .campaign .entry-title {
-  font-weight: 700; }
-
-.post-type-archive-campaign .campaign .entry-body {
-  padding: 1.5rem;
-  background-color: #0092d9;
-  text-align: center;
-  color: #fff; }
-  .post-type-archive-campaign .campaign .entry-body a {
+.post-type-archive-campaign .campaign,
+.tax-campaign-status .campaign {
+  background-color: #00548D; }
+  .post-type-archive-campaign .campaign img,
+  .tax-campaign-status .campaign img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .post-type-archive-campaign .campaign .entry-title,
+  .tax-campaign-status .campaign .entry-title {
+    font-weight: 700; }
+  .post-type-archive-campaign .campaign .entry-body,
+  .tax-campaign-status .campaign .entry-body {
+    padding: 1.5rem;
+    background-color: #0092d9;
+    text-align: center;
     color: #fff; }
+    .post-type-archive-campaign .campaign .entry-body a,
+    .tax-campaign-status .campaign .entry-body a {
+      color: #fff; }
+  .post-type-archive-campaign .campaign .entry-content,
+  .tax-campaign-status .campaign .entry-content {
+    font-size: 1.125rem; }
+  .post-type-archive-campaign .campaign .btn, .post-type-archive-campaign .campaign input[type="submit"],
+  .post-type-archive-campaign .campaign input[type="button"], .post-type-archive-campaign .campaign .wp-block-button .wp-block-button__link, .wp-block-button .post-type-archive-campaign .campaign .wp-block-button__link,
+  .tax-campaign-status .campaign .btn,
+  .tax-campaign-status .campaign input[type="submit"],
+  .tax-campaign-status .campaign input[type="button"],
+  .tax-campaign-status .campaign .wp-block-button .wp-block-button__link,
+  .wp-block-button .tax-campaign-status .campaign .wp-block-button__link {
+    max-width: 100%; }
+  .post-type-archive-campaign .campaign:last-child,
+  .tax-campaign-status .campaign:last-child {
+    margin-bottom: 1.5rem; }
 
-.post-type-archive-campaign .campaign .entry-content {
-  font-size: 1.125rem; }
-
-.post-type-archive-campaign .campaign .btn, .post-type-archive-campaign .campaign input[type="submit"],
-.post-type-archive-campaign .campaign input[type="button"], .post-type-archive-campaign .campaign .wp-block-button .wp-block-button__link, .wp-block-button .post-type-archive-campaign .campaign .wp-block-button__link {
-  max-width: 100%; }
-
-.post-type-archive-campaign .campaign:last-child {
-  margin-bottom: 1.5rem; }
-
-.post-type-archive-campaign .campaign + .campaign {
+.post-type-archive-campaign .campaign + .campaign,
+.tax-campaign-status .campaign + .campaign {
   margin-top: 1.5rem; }
 
-.post-type-archive-campaign .section-footer {
+.post-type-archive-campaign .section-footer,
+.tax-campaign-status .section-footer {
   margin-top: 2rem;
   font-size: 1.125rem; }
-  .post-type-archive-campaign .section-footer a {
+  .post-type-archive-campaign .section-footer a,
+  .tax-campaign-status .section-footer a {
     color: #fff;
     text-decoration: underline; }
 
 @media (min-width: 992px) {
-  .post-type-archive-campaign .campaign {
+  .post-type-archive-campaign .campaign,
+  .tax-campaign-status .campaign {
     position: relative;
     height: 458px; }
-    .post-type-archive-campaign .campaign img {
+    .post-type-archive-campaign .campaign img,
+    .tax-campaign-status .campaign img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
-    .post-type-archive-campaign .campaign .entry-body {
+    .post-type-archive-campaign .campaign .entry-body,
+    .tax-campaign-status .campaign .entry-body {
       position: absolute;
       width: 31.25%;
       height: 100%;

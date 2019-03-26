@@ -12,9 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if( !is_tax() ) : ?>	
+	<?php if( !is_tax( array( 'category', 'campaign-category' ) ) ) : ?>	
 		<?php echo get_the_post_thumbnail( $post->ID, 'banner' ); ?>
 	<?php endif; ?>
+
 
 	<div class="entry-body">
 
