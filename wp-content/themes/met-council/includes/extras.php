@@ -117,37 +117,19 @@ add_filter( 'excerpt_length', 'metcouncil_excerpt_length', 999 );
 function metcouncil_campaign_pre_get_posts( $query ) {
     if ( !is_admin() && $query->is_main_query() ) {
 
-      // if( is_post_type_archive( 'campaign' ) ) {
+      if( is_post_type_archive( 'campaign' ) ) {
 
-      //   if( 'inactive' !== get_query_var( 'campaign-status' ) ) {
+        $tax_query = array(
+          array(
+              'taxonomy'         => 'campaign-status',
+              'terms'            => 'active',
+              'field'            => 'slug',
+          ),
+        );
+        $query->set( 'tax_query', $tax_query );
 
-      //     $tax_query = array(
-      //       array(
-      //           'taxonomy'         => 'campaign-status',
-      //           'terms'            => 'inactive',
-      //           'field'            => 'slug',
-      //           'operator'         => 'NOT IN',
-      //       ),
-      //       // array(
-      //       //     'taxonomy'         => 'language',
-      //       //     'terms'            => 'english',
-      //       //     'field'            => 'slug',
-      //       // ),
-      //     );
-      //     $query->set( 'tax_query', $tax_query );
 
-      //   }
-
-      //   $meta_query = array(
-      //     array(
-      //       'key'     => 'is-primary',
-      //       'value'   => true,
-      //       'compare' => '=',
-      //     ),
-      //   );
-      //   $query->set( 'meta_query', $meta_query );
-
-      // }
+      }
 
       if( is_tax( 'event-category' ) ) {
         $query->set( 'post_type', 'event' );
