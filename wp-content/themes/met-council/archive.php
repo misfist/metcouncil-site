@@ -74,7 +74,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="section-footer">
 					<?php if( is_post_type_archive( 'campaign' ) ) : ?>
-						<a href="<?php echo esc_url( add_query_arg( array( 'campaign-status' => 'inactive' ), get_post_type_archive_link( 'campaign' ) ) ); ?>"><?php _e( 'View Past Campaigns', 'metcouncil' ); ?></a>
+						<a href="<?php echo get_term_link( 'inactive', 'campaign-status' ); ?>" title="<?php esc_attr_e( 'View Past Campaigns', 'metcouncil' ); ?>"><?php _e( 'View Past Campaigns', 'metcouncil' ); ?></a>
 					<?php endif; ?>
 				</footer>
 

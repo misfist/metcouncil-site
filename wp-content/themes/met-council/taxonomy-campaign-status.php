@@ -65,9 +65,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php elseif( is_tax( 'campaign-status', 'inactive' )  ) : ?>
 						<a href="<?php echo get_term_link( 'active', 'campaign-status' ); ?>" title="<?php esc_attr_e( 'View Current Campaigns', 'metcouncil' ); ?>"><?php _e( 'View Current Campaigns', 'metcouncil' ); ?></a>
 					<?php endif; ?>
-					<?php if( is_post_type_archive( 'campaign' ) ) : ?>
-						<a href="<?php echo esc_url( add_query_arg( array( 'campaign-status' => 'inactive' ), get_post_type_archive_link( 'campaign' ) ) ); ?>"><?php _e( 'View Past Campaigns', 'metcouncil' ); ?></a>
-					<?php endif; ?>
 				</footer>
 
 			</main><!-- #main -->
