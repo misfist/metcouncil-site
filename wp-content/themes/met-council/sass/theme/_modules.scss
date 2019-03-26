@@ -1,0 +1,357 @@
+.home {
+  #content {
+    padding-top: 0;
+  }
+}
+
+// background: 
+//     /* top, transparent red */ 
+//     linear-gradient(
+//       rgba(255, 0, 0, 0.45), 
+//       rgba(255, 0, 0, 0.45)
+//     ),
+//     /* bottom, image */
+//     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/owl1.jpg);
+
+.jumbotron-fluid,
+.wp-block-corefunctionality-hero-element {
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+
+  .entry-subtitle,
+  .hero-subtitle {
+    color: $red-secondary;
+  }
+
+  .entry-title,
+  .entry-content,
+  .hero-title,
+  .hero-content {
+    font-family: $font-family-serif;
+    color: $white;
+  }
+
+  .entry-title,
+  .hero-title {
+    font-weight: $font-weight-normal;
+  }
+
+  @include media-breakpoint-up(md) {
+    .entry-subtitle,
+    .entry-title,
+    .entry-content,
+    .hero-subtitle,
+    .hero-title,
+    .hero-content {
+      text-align: initial;
+    }
+  }
+}
+
+.section-title,
+.entry-subtitle,
+.block-title,
+.hero-subtitle {
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-lg;
+  }
+}
+
+.block-title {
+  color: $blue-darkest;
+}
+
+.home-section {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+
+  &.help_answers {
+    background-color: $blue-darker;
+    color: $blue-secondary;
+
+    article {
+      position: relative;
+      padding-left: 70px;
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f2cc';
+        font-size: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: -24px;
+        margin-left: -10px;
+      }
+    }
+
+    ul {
+      @include no-bullets;
+    }
+
+    li {
+      display: inline;
+      color: $white;
+    }
+
+    a {
+      color: $white;
+      border-bottom: 2px solid $blue-secondary;
+      font-size: $font-size-lg-5;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.blocks {
+    background-color: $primary;
+  }
+
+  &.programs {
+    text-align: center;
+
+    .section-title {
+      margin-bottom: 2.25rem;
+      color: $purple-darker;
+    }
+
+    .section-icon {
+      margin-bottom: .5rem;
+    }
+
+    .program-title {
+      font-weight: bold;
+    }
+  }
+
+  &.campaigns {
+
+    background-color: $gray-900;
+    .campaign {}
+
+    .campaign + .campaign {
+      margin-top: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .entry-title {
+      font-weight: $font-weight-bold;
+    }
+
+    .entry-body {
+      padding: 1.5rem;
+      background-color: rgba( $primary, 1 );
+      text-align: center;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
+
+    .entry-content {
+      font-size: $font-size-lg;
+    }
+
+    .section-footer {
+      margin-top: 2rem;
+      font-size: $font-size-lg;
+      
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .block {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .block-inner {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: $white;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
+    box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
+  }
+
+  @include media-breakpoint-up(md) {
+    .section-title,
+    .entry-subtitle {
+      font-size: 1.125rem;
+    }
+
+    &.campaigns {
+      .campaign {
+        position: relative;
+        height: 458px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .entry-body {
+        position: absolute;
+        width: 31.25%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2.5rem;
+        background-color: rgba( $primary, .7 );
+
+      }
+    }
+  }
+
+  .block {
+    h2 {
+      font-size: $font-size-lg-2;
+    }
+
+    h3 {
+      margin-bottom: 1.25rem;
+    }
+
+    .section-image {
+      margin-bottom: 1.25rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+    }
+
+    .entry-content,
+    .entry-footer,
+    ::placeholder {
+      font-family: $font-family-sans-serif;
+    }
+
+    &.subscribe,
+    &.newsletter {
+      .single {
+        @extend .col-16;
+      }
+
+      h2,
+      label,
+      input:not([type="submit"]),
+      ::placeholder {
+        color: $danger;
+      }
+
+      input {
+        border: 1px solid $danger;
+      }
+
+      .btn {
+        background-color: $danger;
+      }
+    }
+
+    &.twitter {
+      font-family: $font-family-sans-serif;
+
+      h2,
+      label,
+      input,
+      ::placeholder {
+        color: $primary;
+      }
+
+      input {
+        border: 1px solid $primary;
+      }
+
+      .btn {
+        background-color: $primary;
+      }
+    }
+
+    &.event {
+
+      h2,
+      h3.event-title a,
+      label,
+      input,
+      ::placeholder {
+        color: $purple-darker;
+      }
+
+      h3.event-title {
+        font-weight: $font-weight-bold;
+      }
+
+      input {
+        border: 1px solid $purple-darker;
+      }
+
+      .btn {
+        background-color: $purple-darker;
+      }
+    }
+
+    .event-date,
+    .event-time {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+    }
+
+    .event-time {
+      .separator {
+        margin-right: .25rem;
+        margin-left: .25rem;
+        &:before {
+          content: '-';
+        }
+      }
+    }
+
+    .event-location {
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+      color: $text-muted;
+      font-size: $font-size-sm;
+
+      .location-name,
+      .location-address {
+        display: inline;
+      }
+      .separator {
+        margin-right: .25rem;
+        margin-left: -.25rem;
+        &:before {
+          content: ',';
+        }
+      }
+    }
+
+    .entry-footer {
+      margin-top: 1.25rem;
+      font-size: $font-size-sm;
+    }
+
+  }
+
+  @include media-breakpoint-up(lg) {}
+}

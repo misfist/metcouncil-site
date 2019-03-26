@@ -1,0 +1,15 @@
+*:not(.content-area) ul {
+  /* @include no-bullets; */
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+%full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+}

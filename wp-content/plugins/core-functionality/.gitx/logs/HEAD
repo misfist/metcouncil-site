@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 c01062a54aedbde8f6926ee4ea5aef1f2aff192f Pea <pea@misfist.com> 1530639496 -0400	clone: from git@github.com:misfist/core-functionality-starter.git
+c01062a54aedbde8f6926ee4ea5aef1f2aff192f c01062a54aedbde8f6926ee4ea5aef1f2aff192f Patrizia <pea@ZenBook.(none)> 1550001618 -0500	reset: moving to origin/master
+c01062a54aedbde8f6926ee4ea5aef1f2aff192f c01062a54aedbde8f6926ee4ea5aef1f2aff192f Pea <pea@misfist.com> 1550001823 -0500	checkout: moving from master to stash
+c01062a54aedbde8f6926ee4ea5aef1f2aff192f ff5bc7237d73881b1e8129b7b7b3ed7e1e364539 Pea <pea@misfist.com> 1550001840 -0500	commit: Stash for later
+ff5bc7237d73881b1e8129b7b7b3ed7e1e364539 3f394c7786e24421cd7810b539b79a9026926d04 Pea <pea@misfist.com> 1550001845 -0500	checkout: moving from stash to gutenberg-test
+3f394c7786e24421cd7810b539b79a9026926d04 3da93cc13bd385c68cff06e732cc285762e70ccd Pea <pea@misfist.com> 1550027011 -0500	commit: Add back Campaign action link fields
+3da93cc13bd385c68cff06e732cc285762e70ccd 679075e1c4960634426be9d26d6077ba41103103 Pea <pea@misfist.com> 1550027037 -0500	commit: Add page type taxonomy for internal organization
+679075e1c4960634426be9d26d6077ba41103103 c01062a54aedbde8f6926ee4ea5aef1f2aff192f Pea <pea@misfist.com> 1550027057 -0500	checkout: moving from gutenberg-test to master
+c01062a54aedbde8f6926ee4ea5aef1f2aff192f a394652e20713cd755081e99fe28cc86d3bd570f Pea <pea@misfist.com> 1550027060 -0500	Fast forward branch master to branch master
+a394652e20713cd755081e99fe28cc86d3bd570f 679075e1c4960634426be9d26d6077ba41103103 Pea <pea@misfist.com> 1550027062 -0500	checkout: moving from master to gutenberg-test

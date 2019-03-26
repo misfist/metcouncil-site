@@ -1,0 +1,284 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+// Colour palette
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef; // #E0E0E0, Light backgrounds + borders
+$gray-300: #dee2e6; // #CCCCCC, Light backgrounds + borders
+$gray-400: #ced4da; // #B3B3B3, Accents
+$gray-500: #adb5bd; // #999999, Accents
+$gray-600: #757575; // Primary Gray
+$gray-700: #4D4D4D; // Dark backgrounds + borders
+$gray-800: #343a40;
+$gray-900: #212121; // Dark backgrounds + borders
+$black:    #000;
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+/* Blues */
+$blue:    #0092D9; // Blue Primary
+$blue-secondary: #4BB9EB; // Accents
+$blue-accent: #83CFF2; // Accents
+$blue-darker: #00548D;
+$blue-darkest: #113C6B;
+$blue-lighter: #B1DEF2;
+$blue-lightest: #DEF2F9;
+
+/* Reds */
+$red:     #EF4619; // Red Primary
+$red-secondary: #FA655A;
+$red-accent: #FF968F;
+$red-darker: #BD3813;
+$red-darkest: #80260D;
+$red-lighter: #FFC6C2;
+$red-lightest: #FFE5E3;
+
+/* Purples */
+$purple:  #992EE6; // Purple Primary
+$purple-secondary: #A84BEB;
+$purple-accent: #C787F5;
+$purple-darker: #6D3695;
+$purple-darkest: #4B2566;
+$purple-lighter: #DBB8F5;
+$purple-lightest: #EEDEFA;
+
+
+$indigo:  #6610f2;
+$pink:    #e83e8c;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue;
+$secondary:     $blue-darker;
+$success:       $green;
+$info:          $purple;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $blue-lightest;
+$dark:          $blue-darkest;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8%;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900;
+$yiq-text-light:            $white;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:              false;
+$enable-rounded:            false;
+$enable-shadows:            true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+
+$font-family-sans-serif:      'Archivo', sans-serif;
+$font-family-serif:           'Merriweather', serif;
+$font-family-base:            $font-family-sans-serif;
+$headings-font-family:        $font-family-sans-serif;
+$icon-font-family:            'FontAwesome';
+$headings-font-weight:        500;
+$font-weight-normal:          500;
+
+/* Font Sizes
+$font-size-base: 16px;
+*/
+
+$font-size-base:              1rem;
+
+$font-size-xs:                ($font-size-base * .75);  //12px
+$font-size-sm:                ($font-size-base * .875);  //14px
+$font-size-lg:                ($font-size-base * 1.125); //18px
+
+$font-size-lg-1:              ($font-size-base * 3); //48px
+$font-size-lg-2:              ($font-size-base * 2.5); //40px
+$font-size-lg-3:              ($font-size-base * 2); //32px
+$font-size-lg-4:              ($font-size-base * 1.875); //30px
+$font-size-lg-5:              ($font-size-base * 1.5); //24px
+$font-size-lg-6:              ($font-size-base * 1.25); //20px
+
+$h1-font-size:                $font-size-lg-1;
+$h2-font-size:                $font-size-lg-2;
+$h3-font-size:                $font-size-lg-5;
+$h4-font-size:                $font-size-lg-6;
+$h5-font-size:                $font-size-lg-5;
+$h6-font-size:                $font-size-lg-6;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white;
+$body-color:                $gray-900;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $primary;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+/* $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+); */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1360px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+/* $container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+); */
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1300px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                16;
+$grid-gutter-width:           2rem;
+
+
+$border-radius: 0;
+
+$btn-border-radius: $border-radius;
+
+$input-border-radius: $border-radius;
+
+/* Breadcrumbs */
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-divider: quote(">");

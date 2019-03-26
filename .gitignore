@@ -29,6 +29,8 @@ wp-content/plugins/*
 !wp-content/plugins/core-functionality/
 !wp-content/plugins/advanced-custom-fields-pro/
 !wp-content/plugins/admin-columns-pro/
+!wp-content/plugins/wp-authors/
+!wp-content/plugins/wp-migrate*
  
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)

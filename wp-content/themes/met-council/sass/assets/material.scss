@@ -1,0 +1,83 @@
+@import '../../src/sass/material/colors';
+@import '../../src/sass/material/functions';
+@import '../../src/sass/material/mixins';
+@import '../../src/sass/material/variables';
+
+// Base CSS
+
+@import '../../src/sass/material/base/base';
+@import '../../src/sass/material/base/grid';
+@import '../../src/sass/material/base/typography';
+
+// Bootstrap components
+// Components covered in Bootstrap's css but not in Material design
+//
+//
+@import '../../src/sass/material/bootstrap/alert';
+@import '../../src/sass/material/bootstrap/badge';
+@import '../../src/sass/material/bootstrap/breadcrumb';
+@import '../../src/sass/material/bootstrap/carousel';
+@import '../../src/sass/material/bootstrap/close';
+@import '../../src/sass/material/bootstrap/code';
+@import '../../src/sass/material/bootstrap/form';
+@import '../../src/sass/material/bootstrap/image';
+@import '../../src/sass/material/bootstrap/jumbotron';
+@import '../../src/sass/material/bootstrap/media';
+@import '../../src/sass/material/bootstrap/nav';
+@import '../../src/sass/material/bootstrap/pagination';
+@import '../../src/sass/material/bootstrap/popover';
+@import '../../src/sass/material/bootstrap/responsive-embed';
+@import '../../src/sass/material/bootstrap/transition';
+
+/* @import '../../src/sass/bootstrap4/alert';
+@import '../../src/sass/bootstrap4/badge';
+@import '../../src/sass/bootstrap4/breadcrumb';
+@import '../../src/sass/bootstrap4/carousel';
+@import '../../src/sass/bootstrap4/close';
+@import '../../src/sass/bootstrap4/code';
+@import '../../src/sass/bootstrap4/forms';
+@import '../../src/sass/bootstrap4/image';
+@import '../../src/sass/bootstrap4/jumbotron';
+@import '../../src/sass/bootstrap4/media';
+@import '../../src/sass/bootstrap4/nav';
+@import '../../src/sass/bootstrap4/pagination';
+@import '../../src/sass/bootstrap4/popover';
+@import '../../src/sass/bootstrap4/responsive-embed';
+@import '../../src/sass/bootstrap4/transition'; */
+
+// Material components
+// Components covered in Material design (https://material.google.com/components)
+
+@import '../../src/sass/material/material/button';
+@import '../../src/sass/material/material/button-flat';
+@import '../../src/sass/material/material/button-float';
+@import '../../src/sass/material/material/button-group';
+@import '../../src/sass/material/material/card';
+@import '../../src/sass/material/material/chip';
+@import '../../src/sass/material/material/data-table';
+@import '../../src/sass/material/material/dialog';
+@import '../../src/sass/material/material/expansion-panel';
+@import '../../src/sass/material/material/menu';
+@import '../../src/sass/material/material/navdrawer';
+@import '../../src/sass/material/material/picker';
+@import '../../src/sass/material/material/progress';
+@import '../../src/sass/material/material/progress-circular';
+@import '../../src/sass/material/material/selection-control';
+@import '../../src/sass/material/material/slider';
+@import '../../src/sass/material/material/snackbar';
+@import '../../src/sass/material/material/stepper';
+@import '../../src/sass/material/material/tab';
+@import '../../src/sass/material/material/text-field';
+@import '../../src/sass/material/material/text-field-box';
+@import '../../src/sass/material/material/text-field-floating-label';
+@import '../../src/sass/material/material/text-field-input-group';
+@import '../../src/sass/material/material/toolbar';
+@import '../../src/sass/material/material/tooltip';
+
+// Utilities
+
+@import '../../src/sass/material/utilities';
+
+// Very basic print styles
+
+@import '../../src/sass/material/print';

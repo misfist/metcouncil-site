@@ -1,0 +1,40 @@
+.block-entry,
+.entry-content {
+  font-family: $font-family-serif;
+}
+
+.btn,
+button {
+  max-width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-sans-serif;
+  letter-spacing: 2px;
+}
+
+.btn:not(.submit) {
+  padding: 1rem 3.75rem;
+}
+
+hr {
+  border-top-color: $border-color;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.screen-reader-text {
+  @include visually-hidden;
+}
+
+/* Forms */
+label {}
+
+input[type="submit"],
+input[type="button"] {
+  @extend .btn;
+}

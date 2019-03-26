@@ -1,0 +1,106 @@
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+}
+
+
+@mixin horizontal-rule( $width: 2.5rem, $color: $red-secondary, $margin: 1rem, $line: 3px, $position: 'before' ) {
+
+  @if $position == 'after' {
+
+    &:after {
+      display: block;
+      margin-top: $margin;
+      content: "";
+      width: $width;
+      border-top: $line solid $color;
+    }
+
+   } @else {
+
+      &:before {
+        display: block;
+        margin-bottom: $margin;
+        content: "";
+        width: $width;
+        border-top: $line solid $color;
+      }
+      
+   }
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin clearfix-before() {
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Lists
+ */
+@mixin no-bullets() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Screen Reader Text
+ */
+@mixin visually-hidden() {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}
+
+@mixin visually-displayed() {
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: initial;
+  position: initial !important;
+}

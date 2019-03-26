@@ -1,0 +1,111 @@
+h1,
+h2,
+h3,
+h4 {}
+
+/**
+h1  48/64
+    40/48
+h2  40/48
+    30/36
+h3  24/32
+    24/28
+h4  14/18
+
+content
+h2  30/40
+    24/32
+h3  24/28
+    18/28
+*/
+
+h1 {
+  margin-bottom: 1rem;
+
+  font-size: $h2-font-size;
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h1-font-size;
+  }
+
+}
+
+h2 {
+  font-size: $font-size-lg-4;
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg-3;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: $h2-font-size;
+  }
+
+}
+
+h3 {
+  font-size: $h3-font-size;
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(lg) {}
+
+  @include media-breakpoint-up(xl) {}
+}
+
+h4 {
+  font-size: $h4-font-size;
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(lg) {}
+
+  @include media-breakpoint-up(xl) {}
+}
+
+/* Content Sizes */
+.single .content-area {
+
+  h2 {
+    font-size: $font-size-lg-5;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-lg-4;
+    }
+
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size-lg-5;
+    }
+
+  }
+
+}
+
+label {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+}
+
+.entry-content {
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-lg;
+  }
+
+}

@@ -1,0 +1,27 @@
+.size-banner {
+  width: 100%;
+  /* max-width: 100%; */
+  height: auto;
+}
+
+.full-width {
+  /* width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw; */
+  width: 100%;
+  height: auto;
+  object-position: 50% 50%; /* default value: image is centered*/
+}
+
+.program-icon {
+  height: 116px;
+  width: auto;
+}
+
+.block-image {
+  height: 58px;
+  height: 3.625rem;
+  width: auto;
+}

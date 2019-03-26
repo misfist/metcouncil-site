@@ -1,0 +1,29 @@
+@import "theme/variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "assets/bootstrap4";// <--------- Loads Bootstrap
+
+/* @import "../src/sass/understrap/understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP */
+/* @import "../src/sass/understrap/theme/contact-form7";// <-------- Loads some basic styling for contact form 7 plugin */
+
+//Optional files - If you don´t use the corresponding scripts/fonts comment em out
+/* @import "assets/font-awesome"; // <------- Font Awesome Icon font */
+@import 'assets/line-awesome-font-awesome.scss';
+
+@import "assets/underscores"; // <------- Underscores media styles
+
+// Any additional imported files //
+@import 'theme/mixins';
+@import 'theme/base';
+@import 'theme/typography';
+@import 'theme/common';
+@import 'theme/media';
+@import 'theme/navigation';
+@import 'theme/header';
+@import 'theme/footer';
+@import 'theme/posts';
+@import 'theme/archives';
+@import 'theme/widgets';
+@import 'theme/modules';
+@import 'theme/gutenberg';
+@import 'theme/blocks';
+@import 'theme/plugins';
+@import 'theme/calendar';
