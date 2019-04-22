@@ -33,13 +33,6 @@
       </div>
     <?php endif; ?>
 
-    <?php 
-    var_dump( eo_get_the_occurrence_id() );
-    ?>
-
-    <!-- eo_get_permalink( $event_id = false, $occurrence_id = false ) -->
-
-
     <?php printf( '<a class="btn btn-secondary understrap-read-more-link" href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
       esc_url( eo_get_permalink( get_the_ID(), eo_get_the_occurrence_id() ) ),
       esc_attr( get_the_title() ),

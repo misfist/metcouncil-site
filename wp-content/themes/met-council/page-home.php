@@ -58,6 +58,10 @@ get_header();
 
 			<div class="container">
 
+				<header class="section-header">
+					<h2 class="section-title"><?php echo esc_attr( 'Support our current campaigns' ); ?></h2>
+				</header>
+	
 				<?php while( $query->have_posts() ) : $query->the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content', get_post_type() ); ?>

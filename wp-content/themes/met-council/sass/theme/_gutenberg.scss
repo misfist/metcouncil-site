@@ -84,6 +84,23 @@ blockquote {
 
 }
 
+.wp-block-image {
+
+  @include media-breakpoint-down(md) {
+    .alignleft,
+    .alignright {
+      float: none;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+}
+
 .wp-block-columns {
   display: block;
 

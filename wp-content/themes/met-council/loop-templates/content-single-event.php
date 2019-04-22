@@ -18,9 +18,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="event-date">
             <?php
-                //Formats the start & end date of the event
-                echo eo_format_event_occurrence();
+                $date_format = ( eo_is_all_day( $post->ID ) ? get_option( 'date_format' ) : get_option( 'date_format' ) . ', ' . get_option( 'time_format' ) );
             ?>
+
+            <?php if( eo_recurs() ) : ?>
+
+                <?php $occurrence = eo_get_next_occurrence_of( $post->ID );  ?>
+
+                <?php echo eo_get_the_start( $date_format, $post->ID, $occurrence['occurrence_id'] ); ?> <span class="separator start-end">-</span>
+                <?php echo eo_get_the_end( get_option( 'time_format' ), $post->ID, $occurrence['occurrence_id'] ); ?>
+            
+            <?php else : ?>
+
+            <?php echo eo_get_the_start( $date_format, $post->ID ); ?> <span class="separator start-end">-</span>
+                <?php echo eo_get_the_end( get_option( 'time_format' ), $post->ID, $occurrence['occurrence_id'] ); ?>
+
+            <?php endif; ?>
+
         </div>
     </header>
 

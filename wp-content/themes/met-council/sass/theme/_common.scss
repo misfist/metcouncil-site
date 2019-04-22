@@ -15,7 +15,15 @@ button {
 }
 
 .btn:not(.submit) {
-  padding: 1rem 3.75rem;
+  padding: 1rem 1.75rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 1rem 2.75rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 1rem 3.75rem;
+  }
 }
 
 hr {

@@ -7661,7 +7661,15 @@ h3  24/28
     letter-spacing: 2px; }
   .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
   .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
-    padding: 1rem 3.75rem; }
+    padding: 1rem 1.75rem; }
+    @media (min-width: 768px) {
+      .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
+      .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
+        padding: 1rem 2.75rem; } }
+    @media (min-width: 992px) {
+      .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
+      .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
+        padding: 1rem 3.75rem; } }
   .edit-post-visual-editor hr {
     border-top-color: #dee2e6; }
     @media (min-width: 768px) {
@@ -7712,10 +7720,12 @@ h3  24/28
     margin-top: 3.125rem; }
   .edit-post-visual-editor .single .content-area h2 + h3 {
     margin-top: 0; }
-  .edit-post-visual-editor .single .content-area .entry-content:after {
-    content: "";
-    display: table;
+  .edit-post-visual-editor .single .content-area .entry-content {
     clear: both; }
+    .edit-post-visual-editor .single .content-area .entry-content:after {
+      content: "";
+      display: table;
+      clear: both; }
   .edit-post-visual-editor .single-campaign .hero-image {
     height: 200px;
     overflow: hidden;
@@ -7769,6 +7779,11 @@ h3  24/28
       font-size: 1.125rem; }
       .edit-post-visual-editor .intro h2.intro-title {
         margin-top: 0; } }
+  .edit-post-visual-editor .single-event .site-main .event-date {
+    margin-bottom: 1rem;
+    color: #00548D;
+    font-size: 1.875rem;
+    font-weight: bold; }
   .edit-post-visual-editor .home #content {
     padding-top: 0; }
   .edit-post-visual-editor .jumbotron-fluid,
@@ -7874,6 +7889,11 @@ h3  24/28
       background-color: #212121; }
       .edit-post-visual-editor .home-section.campaigns .campaign + .campaign {
         margin-top: 1.5rem; }
+      .edit-post-visual-editor .home-section.campaigns .section-title {
+        color: #4BB9EB;
+        letter-spacing: 1px;
+        font-size: 1.125rem;
+        text-align: center; }
       .edit-post-visual-editor .home-section.campaigns img {
         width: 100%;
         height: 100%;
@@ -7896,6 +7916,10 @@ h3  24/28
         .edit-post-visual-editor .home-section.campaigns .section-footer a {
           color: #fff;
           text-decoration: underline; }
+      @media (min-width: 768px) {
+        .edit-post-visual-editor .home-section.campaigns .section-title {
+          margin-bottom: .8rem;
+          text-align: initial; } }
     .edit-post-visual-editor .home-section .block {
       margin-bottom: 2rem;
       text-align: center; }
@@ -8098,6 +8122,15 @@ h3  24/28
       .edit-post-visual-editor .gutenberg-enabled #content .wp-block-image.alignwide,
       .edit-post-visual-editor .gutenberg-enabled #content .alignwide {
         max-width: 1300px; } }
+  @media (max-width: 991.98px) {
+    .edit-post-visual-editor .wp-block-image .alignleft,
+    .edit-post-visual-editor .wp-block-image .alignright {
+      float: none;
+      width: 100%; }
+      .edit-post-visual-editor .wp-block-image .alignleft img,
+      .edit-post-visual-editor .wp-block-image .alignright img {
+        width: 100%;
+        height: auto; } }
   .edit-post-visual-editor .wp-block-columns {
     display: block; }
   .edit-post-visual-editor .wp-block-image.alignfull,
@@ -8117,10 +8150,12 @@ h3  24/28
       color: #757575; }
     .edit-post-visual-editor .wp-block-advanced-gutenberg-blocks-intro:after {
       border-top-color: #dee2e6; }
-  .edit-post-visual-editor .wp-block-separator:after {
-    content: "";
-    display: table;
+  .edit-post-visual-editor .wp-block-separator {
     clear: both; }
+    .edit-post-visual-editor .wp-block-separator:after {
+      content: "";
+      display: table;
+      clear: both; }
   .edit-post-visual-editor .wp-block-corefunctionality-hero-element {
     background-size: cover !important;
     background-position: center center; }

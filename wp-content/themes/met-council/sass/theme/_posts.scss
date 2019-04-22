@@ -119,3 +119,14 @@
     }
   }
 }
+
+.single-event {
+  .site-main {
+    .event-date {
+      margin-bottom: 1rem;
+      color: $blue-darker;
+      font-size: $font-size-lg-4;
+      font-weight: bold;
+    }
+  }
+}
