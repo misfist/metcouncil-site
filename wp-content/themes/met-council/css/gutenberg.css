@@ -8421,6 +8421,9 @@ h3  24/28
         min-height: 1px;
         padding-right: 1rem;
         padding-left: 1rem; }
+      .edit-post-visual-editor .wp-block-columns .wp-block-column:not(:first-child),
+      .edit-post-visual-editor .wp-block-columns .wp-block-column:nth-child(2n) {
+        margin-left: 0; }
       .edit-post-visual-editor .wp-block-columns.has-2-columns .wp-block-column {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 100%;

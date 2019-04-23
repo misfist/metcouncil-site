@@ -60,7 +60,7 @@ blockquote {
 
 .has-primary-background-color {
   background-color: $primary;
-  
+
   &.btn {
     background-color: $primary;
   }
@@ -223,6 +223,11 @@ blockquote {
 
     .wp-block-column {
       @include make-col-ready;
+    }
+
+    .wp-block-column:not(:first-child),
+    .wp-block-column:nth-child(2n) {
+      margin-left: 0;
     }
 
     &.has-2-columns {
