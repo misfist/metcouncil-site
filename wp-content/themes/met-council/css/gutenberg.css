@@ -7700,10 +7700,6 @@ h3  24/28
   .edit-post-visual-editor .program-icon {
     height: 116px;
     width: auto; }
-  .edit-post-visual-editor .block-image {
-    height: 58px;
-    height: 3.625rem;
-    width: auto; }
   .edit-post-visual-editor #content {
     padding-top: 1.875rem; }
   .edit-post-visual-editor .entry-meta .category {
@@ -8259,5 +8255,13 @@ h3  24/28
       text-decoration: underline; }
     .edit-post-visual-editor .clipboard-link .icon {
       font-size: 1.25rem; }
+  .edit-post-visual-editor .block-image {
+    height: 58px;
+    height: 3.625rem;
+    width: auto; }
+  .edit-post-visual-editor .wp-block-gallery .blocks-gallery-item {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
 
 /*# sourceMappingURL=gutenberg.css.map */

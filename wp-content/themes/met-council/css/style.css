@@ -9965,11 +9965,6 @@ hr {
   height: 116px;
   width: auto; }
 
-.block-image {
-  height: 58px;
-  height: 3.625rem;
-  width: auto; }
-
 /* Main Nav */
 .navbar-expand-md .navbar-nav {
   text-transform: uppercase;
@@ -11336,6 +11331,16 @@ blockquote {
     text-decoration: underline; }
   .clipboard-link .icon {
     font-size: 1.25rem; }
+
+.block-image {
+  height: 58px;
+  height: 3.625rem;
+  width: auto; }
+
+.wp-block-gallery .blocks-gallery-item {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0; }
 
 /* Knowledgebase Search */
 .kbe_search_field {
