@@ -73,3 +73,24 @@ function core_disable_gutenberg( $can_edit, $post_type ) {
 }
 add_filter( 'gutenberg_can_edit_post_type', 'core_disable_gutenberg', 10, 2 );
 add_filter( 'use_block_editor_for_post_type', 'core_disable_gutenberg', 10, 2 );
+
+/**
+ * Add Reuseable Blocks Admin Menu
+ *
+ * @see https://developer.wordpress.org/reference/functions/add_menu_page/
+ */
+function core_add_admin_menu() {
+
+	add_menu_page(
+		esc_html__( 'Blocks', 'core-functionality' ),
+		esc_html__( 'Blocks', 'core-functionality' ),
+		'manage_options',
+		'edit.php?post_type=wp_block',
+		'',
+		'dashicons-layout',
+		60
+	);
+
+}
+add_action( 'admin_menu', 'core_add_admin_menu' );
+
