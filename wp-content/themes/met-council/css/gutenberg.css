@@ -7929,6 +7929,7 @@ h3  24/28
         .edit-post-visual-editor .section-group .programs .section-icon img {
           height: 100%;
           width: auto;
+          max-height: 100%;
           max-width: 100%;
           -o-object-fit: contain;
              object-fit: contain; }
