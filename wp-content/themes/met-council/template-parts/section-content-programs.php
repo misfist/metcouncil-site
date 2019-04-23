@@ -20,11 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $count = count( get_sub_field( 'programs' ) ); ?>
 
 <?php if( 4 === $count ) : ?>
-	<?php $class = 'col-md-8 col-lg-4'; ?>
+	<?php $class = 'col-sm-8 col-lg-4'; ?>
 <?php elseif( 3 === $count ) : ?>
-	<?php $class = 'col-md'; ?>
+	<?php $class = 'col-lg'; ?>
 <?php elseif( 2 === $count ) : ?>
-	<?php $class = 'col-md-8'; ?>
+	<?php $class = 'col-sm-8'; ?>
 <?php else : ?>
 	<?php $class = ''; ?>
 <?php endif; ?>

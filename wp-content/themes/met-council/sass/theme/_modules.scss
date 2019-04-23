@@ -56,8 +56,10 @@
 .block-title,
 .hero-subtitle {
   font-weight: $font-weight-normal;
+  font-family: $font-family-narrow;
   text-transform: uppercase;
   font-size: $font-size-base;
+  letter-spacing: 1px;
 
   @include media-breakpoint-up(md) {
     font-size: $font-size-lg;
@@ -68,7 +70,8 @@
   color: $blue-darkest;
 }
 
-.home-section {
+.home-section,
+.section-group {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 
@@ -116,20 +119,49 @@
     background-color: $primary;
   }
 
-  &.programs {
+  &.programs,
+  .programs {
     text-align: center;
+    align-items: center;
+
+    .program {
+      padding: 1rem 2rem;
+    }
+
+    .program + .program {
+      border-left: none;
+      border-top: 1px solid $gray-300;
+    }
 
     .section-title {
       margin-bottom: 2.25rem;
+      font-weight: $font-weight-normal;
       color: $purple-darker;
+      font-size: $font-size-lg;
     }
 
     .section-icon {
       margin-bottom: .5rem;
+      height: 116px;
+      box-sizing: border-box;
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
     }
 
-    .program-title {
+    .program-title,
+    .h3 {
+      margin-top: 0;
       font-weight: bold;
+    }
+
+    .program-entry {
+      font-size: $font-size-sm;
+      font-family: $font-family-sans-serif;
     }
   }
 
@@ -205,37 +237,6 @@
     -webkit-box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
     -moz-box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
     box-shadow: 10px 10px 0px 0px rgba($blue-darker,1);
-  }
-
-  @include media-breakpoint-up(md) {
-    .section-title,
-    .entry-subtitle {
-      font-size: 1.125rem;
-    }
-
-    &.campaigns {
-      .campaign {
-        position: relative;
-        height: 458px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .entry-body {
-        position: absolute;
-        width: 31.25%;
-        height: 100%;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        padding: 2.5rem;
-        background-color: rgba( $primary, .7 );
-
-      }
-    }
   }
 
   .block {
@@ -366,6 +367,58 @@
       font-size: $font-size-sm;
     }
 
+  }
+
+  @include media-breakpoint-up(sm) {
+
+    &.programs,
+    .programs {
+      .program + .program {
+        border-top: none;
+        border-left: 1px solid $gray-300;
+      }
+    }
+    
+  }
+
+  @include media-breakpoint-up(md) {
+    .section-title,
+    .entry-subtitle {
+      font-size: 1.125rem;
+    }
+
+    &.campaigns {
+      .campaign {
+        position: relative;
+        height: 458px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .entry-body {
+        position: absolute;
+        width: 31.25%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 2.5rem;
+        background-color: rgba( $primary, .7 );
+
+      }
+    }
+
+    // &.programs,
+    // .programs {
+    //   .program + .program {
+    //     border-top: none;
+    //     border-left: 1px solid $gray-300;
+    //   }
+    // }
+    
   }
 
   @include media-breakpoint-up(lg) {}

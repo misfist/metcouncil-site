@@ -73,9 +73,11 @@
   }
 
   .entry-intro {
-    margin-bottom: 3.125rem;
-    padding-bottom: 3.125rem;
-    border-bottom: 3px solid $blue-darkest;
+    &:after {
+      margin-bottom: 3.125rem;
+      padding-bottom: 2.125rem;
+      border-bottom: 3px solid $blue-darkest;
+    }
   }
 
   @include media-breakpoint-up(md) {
