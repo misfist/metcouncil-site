@@ -84,7 +84,7 @@ function core_add_admin_menu() {
 	add_menu_page(
 		esc_html__( 'Blocks', 'core-functionality' ),
 		esc_html__( 'Blocks', 'core-functionality' ),
-		'manage_options',
+		'edit_plugins',
 		'edit.php?post_type=wp_block',
 		'',
 		'dashicons-layout',
