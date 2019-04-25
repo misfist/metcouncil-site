@@ -27,9 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="content-area row">
 
 	  <?php if( is_active_sidebar( 'kbe_cat_widget' ) ) : ?>
-	    <div id="toc" class="widget-area col-md-4">
-	      <?php dynamic_sidebar( 'kbe_cat_widget' ); ?>
-	    </div>
+		<?php dynamic_sidebar( 'kbe_cat_widget' ); ?>
 	  <?php endif; ?>
 
 		<div class="content-body col-md">

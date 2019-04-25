@@ -32,21 +32,21 @@ function metcouncil_register_widgets() {
 		'name'          => esc_html__( 'Help & Answers', 'metcouncil' ),
 		'id'            => 'kbe_cat_widget',
 		'description'   => esc_html__( 'Help & Answers sidebar area', 'metcouncil' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-4">',
     'after_widget'  => '</aside><!-- .kbe_cat_widget -->',
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
 	) );
 
-  register_sidebar( array(
-		'name'          => esc_html__( 'Help & Answers Disclaimer', 'metcouncil' ),
-		'id'            => 'help-answers-disclaimer',
-		'description'   => esc_html__( 'Help & Answers disclaimer text', 'metcouncil' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside><!-- .help-answers-disclaimer -->',
-    'before_title'  => '<h2 class="widget-title">',
-    'after_title'   => '</h2>',
-	) );
+  // register_sidebar( array(
+	// 	'name'          => esc_html__( 'Help & Answers Disclaimer', 'metcouncil' ),
+	// 	'id'            => 'help-answers-disclaimer',
+	// 	'description'   => esc_html__( 'Help & Answers disclaimer text', 'metcouncil' ),
+  //   'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+  //   'after_widget'  => '</aside><!-- .help-answers-disclaimer -->',
+  //   'before_title'  => '<h2 class="widget-title">',
+  //   'after_title'   => '</h2>',
+	// ) );
 
   register_sidebar( array(
 		'name'          => esc_html__( 'Content Footer', 'metcouncil' ),
