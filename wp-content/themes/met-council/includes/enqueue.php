@@ -19,6 +19,10 @@ function understrap_remove_scripts() {
 
    wp_dequeue_style( 'kbe_theme_style' );
    wp_deregister_style( 'kbe_theme_style' );
+
+   wp_deregister_style( 'ez-icomoon' );
+   wp_deregister_style( 'ez-toc' );
+   wp_deregister_style( 'ez-toc-inline' );
 }
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 

@@ -57,36 +57,6 @@
 }
 
 /* Forms */
-.wpforms-container {
-
-   .wpforms-field-label,
-   .form-group {
-     font-weight: $font-weight-normal;
-     text-align: left;
-   }
-
-   .wpforms-field {
-     margin-bottom: 0;
-   }
-
-   .wpforms-submit-container {
-     padding-top: .75rem;
-   }
-
-   .wpforms-field-hp {
-     display: none;
-   }
-}
-
-.wpforms-field {
-  input[type="text"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"] {
-    @extend .form-control;
-  }
-}
-
 .caldera-grid {
   button, 
   input, 
@@ -95,7 +65,6 @@
     font-family: $font-family-base;
   }
 }
-
 
 /* TOC */
 .ez-toc-list,

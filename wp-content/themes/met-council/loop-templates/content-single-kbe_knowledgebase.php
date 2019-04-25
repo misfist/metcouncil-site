@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    </div>
 	  <?php endif; ?>
 
-		<div class="content-body col-md-12">
+		<div class="content-body col-md">
 
 			<div class="entry-content">
 
@@ -47,16 +47,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endif; ?>
 
 				<?php the_content(); ?>
-
-				<?php if( is_active_sidebar( 'help-answers-disclaimer' ) ) : ?>
-					<div id="legal-disclaimer" class="widget-area">
-						<?php dynamic_sidebar( 'help-answers-disclaimer' ); ?>
-					</div><!-- #legal-disclaimer -->
-				<?php endif; ?>
 				
 				<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'metcouncil' ),
 					'after'  => '</div>',
 				) );
 				?>
@@ -66,7 +60,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<footer class="entry-footer">
 
 				<?php understrap_entry_footer(); ?>
-
 
 				<?php
 				$args = array(
