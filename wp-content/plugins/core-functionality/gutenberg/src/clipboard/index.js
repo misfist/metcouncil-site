@@ -18,9 +18,8 @@ const copyButton =
 	<button
 		className="clipboard-link"
 		data-target="block-content"
-		data-clipboard-target="block-content"
 	>
-		{ __( 'Copy text', 'core-functionality' ) }
+		<span>{ __( 'Copy text', 'core-functionality' ) }</span>
 	</button>;
 
 /**
