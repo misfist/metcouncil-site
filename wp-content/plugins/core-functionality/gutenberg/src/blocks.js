@@ -9,10 +9,9 @@
  * Webpack is compiling as the input file.
  */
 
-// import './content-blocks';
+import './group';
 import './subhead';
 import './summary';
 import './intro';
 import './translation';
 import './clipboard';
-// import './hero-image';

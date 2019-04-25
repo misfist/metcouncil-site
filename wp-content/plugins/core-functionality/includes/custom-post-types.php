@@ -280,13 +280,13 @@ function core_kb_register_post_type_args( $args, $post_type ) {
     'show_in_rest'          => true,
     'template' => array(
       array( 'corefunctionality/translation-title', array(
-        'placeholder' => 'Add Translation Title...',
-      ) ),
-      array( 'corefunctionality/summary', array(
-        'placeholder' => 'Add Summary...',
+        'placeholder' => __( 'Add Translation Title...', 'core-functionality' ),
       ) ),
       array( 'corefunctionality/intro', array(
-        'placeholder' => 'Add Intro...',
+        'placeholder' => __( 'Add Intro...', 'core-functionality' ),
+      ) ),
+      array( 'core/paragraph', array(
+        'placeholder' => __( 'Add content...', 'core-functionality' ),
       ) ),
     ),
   );
