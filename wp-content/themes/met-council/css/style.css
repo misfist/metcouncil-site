@@ -10586,83 +10586,6 @@ hr {
       max-width: 100%;
       height: auto; }
 
-#legal-disclaimer,
-.legal-disclaimer {
-  margin-top: 2.125rem;
-  padding-top: 2.125rem;
-  margin-bottom: 2.125rem;
-  padding-bottom: 2.125rem;
-  color: #EF4619;
-  border-top: 3px solid #EF4619;
-  border-bottom: 3px solid #EF4619;
-  /* Don't show Spanish Disclaimer */ }
-  #legal-disclaimer a,
-  .legal-disclaimer a {
-    color: #EF4619;
-    border-bottom: 1px solid #EF4619;
-    text-decoration: none; }
-  #legal-disclaimer .widget-title,
-  #legal-disclaimer h3.section-title,
-  .legal-disclaimer .widget-title,
-  .legal-disclaimer h3.section-title {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-top: 0;
-    text-align: center;
-    font-family: "Archivo", sans-serif;
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-transform: none; }
-  #legal-disclaimer .textwidget,
-  #legal-disclaimer .section-content,
-  .legal-disclaimer .textwidget,
-  .legal-disclaimer .section-content {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    font-size: 0.875rem;
-    font-family: "Archivo", sans-serif; }
-    #legal-disclaimer .textwidget p:last-child,
-    #legal-disclaimer .section-content p:last-child,
-    .legal-disclaimer .textwidget p:last-child,
-    .legal-disclaimer .section-content p:last-child {
-      margin-bottom: 0; }
-  @media (min-width: 768px) {
-    #legal-disclaimer,
-    .legal-disclaimer {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      margin-right: -1rem;
-      margin-left: -1rem; }
-      #legal-disclaimer .widget-title,
-      #legal-disclaimer .section-title,
-      .legal-disclaimer .widget-title,
-      .legal-disclaimer .section-title {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 18.75%;
-                flex: 0 0 18.75%;
-        max-width: 18.75%;
-        text-align: unset; }
-      #legal-disclaimer .textwidget,
-      #legal-disclaimer .section-content,
-      .legal-disclaimer .textwidget,
-      .legal-disclaimer .section-content {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 81.25%;
-                flex: 0 0 81.25%;
-        max-width: 81.25%; } }
-  #legal-disclaimer .spanish-text,
-  .legal-disclaimer .spanish-text {
-    display: none; }
-
 /* Show Spanish Disclaimer When on Spanish Language Page */
 .language-espanol #legal-disclaimer .english-text {
   display: none; }
@@ -11515,18 +11438,14 @@ blockquote {
     display: none; }
 
 /* Editor Only */
-.edit-post-visual-editor .legal-disclaimer [data-type="core/heading"] {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 18.75%;
-          flex: 0 0 18.75%;
-  max-width: 18.75%;
-  background-color: red; }
-
-.edit-post-visual-editor .legal-disclaimer [data-type="corefunctionality/group"] {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 81.25%;
-          flex: 0 0 81.25%;
-  max-width: 81.25%; }
+.wp-block .legal-disclaimer {
+  display: block;
+  max-width: 100%;
+  width: 100%; }
+  .wp-block .legal-disclaimer .section-content,
+  .wp-block .legal-disclaimer .section-title {
+    max-width: 100% !important;
+    width: 100%; }
 
 .wp-block-corefunctionality-clipboard {
   margin-top: 1rem;

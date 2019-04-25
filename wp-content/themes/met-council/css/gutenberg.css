@@ -8542,17 +8542,14 @@ h3  24/28
     .edit-post-visual-editor #legal-disclaimer .spanish-text,
     .edit-post-visual-editor .legal-disclaimer .spanish-text {
       display: none; }
-  .edit-post-visual-editor .edit-post-visual-editor .legal-disclaimer [data-type="core/heading"] {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 18.75%;
-            flex: 0 0 18.75%;
-    max-width: 18.75%;
-    background-color: red; }
-  .edit-post-visual-editor .edit-post-visual-editor .legal-disclaimer [data-type="corefunctionality/group"] {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 81.25%;
-            flex: 0 0 81.25%;
-    max-width: 81.25%; }
+  .edit-post-visual-editor .wp-block .legal-disclaimer {
+    display: block;
+    max-width: 100%;
+    width: 100%; }
+    .edit-post-visual-editor .wp-block .legal-disclaimer .section-content,
+    .edit-post-visual-editor .wp-block .legal-disclaimer .section-title {
+      max-width: 100% !important;
+      width: 100%; }
   .edit-post-visual-editor .wp-block-corefunctionality-clipboard {
     margin-top: 1rem;
     margin-bottom: 2.75rem; }
