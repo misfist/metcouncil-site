@@ -64,6 +64,21 @@
   textarea {
     font-family: $font-family-base;
   }
+
+  .row {
+    &.single {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 0 !important;
+        padding-left: 0 !important;
+      
+      .single {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 /* TOC */
@@ -127,3 +142,60 @@
     }
   }
 }
+
+/* Clipboard */
+.wp-block-corefunctionality-clipboard {
+  .clipboard-link {
+    text-transform: none;
+    font-weight: $font-weight-normal;
+    background-color: $white;
+    letter-spacing: initial;
+    
+    span {
+      text-decoration: underline;
+      font-size: $font-size-sm;
+    }
+
+    &:before {
+      content: '\f1a7';
+      font-family: $icon-font-family;
+      text-decoration: none;
+      font-size: $font-size-lg;
+    } 
+  }
+
+  .block-content {
+
+    &.copied > * {
+      background-color: transparentize( $yellow, 1 );
+      animation: fadeOut 5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes fadeOut {
+      0% { 
+        background-color: transparentize( $yellow, 1 );
+      }
+      10% { 
+        background-color: transparentize( $yellow, .5 );
+      }
+      100% { 
+        background-color: transparentize( $yellow, 1 );
+      }
+  }
+
+  @include media-breakpoint-up(md) {
+    .clipboard-link {
+      float: right;
+      @include clearfix-after;
+    }
+
+    .block-content {
+      @include clearfix;
+    }
+  }
+
+}
+
+

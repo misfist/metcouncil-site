@@ -9791,14 +9791,16 @@ label {
 
 .btn, input[type="submit"],
 input[type="button"], .wp-block-button .wp-block-button__link,
-button {
+button,
+.wp-block-button__link {
   max-width: 100%;
   border: none;
   text-transform: uppercase;
   font-size: .75rem;
   font-weight: 700;
   font-family: "Archivo", sans-serif;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  white-space: normal; }
 
 .btn:not(.submit), input:not(.submit)[type="submit"],
 input:not(.submit)[type="button"], .wp-block-button .wp-block-button__link:not(.submit) {
@@ -11541,6 +11543,16 @@ blockquote {
 .caldera-grid textarea {
   font-family: "Archivo", sans-serif; }
 
+.caldera-grid .row.single {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+  .caldera-grid .row.single .single {
+    padding-right: 0;
+    padding-left: 0; }
+
 /* TOC */
 .ez-toc-list,
 .action-links {
@@ -11590,6 +11602,58 @@ blockquote {
 
 .event-time .separator:before {
   content: ' - '; }
+
+/* Clipboard */
+.wp-block-corefunctionality-clipboard .clipboard-link {
+  text-transform: none;
+  font-weight: 500;
+  background-color: #fff;
+  letter-spacing: initial; }
+  .wp-block-corefunctionality-clipboard .clipboard-link span {
+    text-decoration: underline;
+    font-size: 0.875rem; }
+  .wp-block-corefunctionality-clipboard .clipboard-link:before {
+    content: '\f1a7';
+    font-family: "FontAwesome";
+    text-decoration: none;
+    font-size: 1.125rem; }
+
+.wp-block-corefunctionality-clipboard .block-content.copied > * {
+  background-color: rgba(255, 193, 7, 0);
+  -webkit-animation: fadeOut 5s;
+          animation: fadeOut 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    background-color: rgba(255, 193, 7, 0); }
+  10% {
+    background-color: rgba(255, 193, 7, 0.5); }
+  100% {
+    background-color: rgba(255, 193, 7, 0); } }
+
+@keyframes fadeOut {
+  0% {
+    background-color: rgba(255, 193, 7, 0); }
+  10% {
+    background-color: rgba(255, 193, 7, 0.5); }
+  100% {
+    background-color: rgba(255, 193, 7, 0); } }
+
+@media (min-width: 768px) {
+  .wp-block-corefunctionality-clipboard .clipboard-link {
+    float: right; }
+    .wp-block-corefunctionality-clipboard .clipboard-link:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .wp-block-corefunctionality-clipboard .block-content {
+    clear: both; }
+    .wp-block-corefunctionality-clipboard .block-content:after {
+      content: "";
+      display: table;
+      clear: both; } }
 
 /* Blues */
 /* Reds */

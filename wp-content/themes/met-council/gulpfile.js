@@ -262,4 +262,4 @@ gulp.task( 'clean-dist-product', function() {
   return del( [paths.distprod + '/**'] );
 } );
 
-gulp.task('default', ['styles', 'watch-bs']);
+gulp.task('default', ['styles', 'scripts', 'watch-bs']);

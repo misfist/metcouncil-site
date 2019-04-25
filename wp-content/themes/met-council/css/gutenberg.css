@@ -7656,14 +7656,16 @@ h3  24/28
     font-family: "Merriweather", serif; }
   .edit-post-visual-editor .btn, .edit-post-visual-editor input[type="submit"],
   .edit-post-visual-editor input[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link,
-  .edit-post-visual-editor button {
+  .edit-post-visual-editor button,
+  .edit-post-visual-editor .wp-block-button__link {
     max-width: 100%;
     border: none;
     text-transform: uppercase;
     font-size: .75rem;
     font-weight: 700;
     font-family: "Archivo", sans-serif;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    white-space: normal; }
   .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
   .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
     padding: 1rem 1.75rem; }
