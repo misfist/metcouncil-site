@@ -15,10 +15,13 @@ const { Component } = wp.element;
 const { RichText, InnerBlocks } = wp.editor;
 
 const copyButton = 
-	<div class="clipboard-link">
-		<span class="icon fa fa-clone la la-copy"></span> 
-		<a href="#" data-target="block-content">{ __( 'Copy text', 'core-functionality' ) }</a>
-	</div>;
+	<button
+		className="clipboard-link"
+		data-target="block-content"
+		data-clipboard-target="block-content"
+	>
+		{ __( 'Copy text', 'core-functionality' ) }
+	</button>;
 
 /**
  * Register: Gutenberg Block.
@@ -59,30 +62,13 @@ registerBlockType( 'corefunctionality/clipboard', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: props => {
-		const { attributes: { content }, className, setAttributes } = props;
+		const { attributes: {}, className, setAttributes } = props;
 
 		return (
 			<div className={ className }>
-				{ copyButton }
-				<div className='block-content'>
-					<InnerBlocks
-						allowedBlocks={ [ 
-							'corefunctionality/article-title-block',
-							'corefunctionality/article-subtitle-block',
-							'core/heading', 
-							'core/image', 
-							'core/paragraph',
-							'core/list',
-							'core/table',
-							'core/quote',
-							'core/verse',
-							'core/pullquote',
-							'core/embed',
-							'core/shortcode'
-						] }
-						className="body-content"
-						tagName="div"
-					/>
+				{copyButton}
+				<div className="block-content">
+					<InnerBlocks />
 				</div>
 			</div>
 		);
@@ -97,12 +83,12 @@ registerBlockType( 'corefunctionality/clipboard', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	save: props => {
-		const { attributes: { content } } = props;
+		const { attributes: {} } = props;
 
 		return (
 			<div>
-				{ copyButton }
-				<div className='block-content'>
+				{copyButton}
+				<div className="block-content">
 					<InnerBlocks.Content />
 				</div>
 			</div>

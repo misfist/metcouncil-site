@@ -264,7 +264,7 @@ function core_kb_register_post_type_args( $args, $post_type ) {
   $custom_args = array(
     'label'                 => __( 'Article', 'core-functionality' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions' ),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
