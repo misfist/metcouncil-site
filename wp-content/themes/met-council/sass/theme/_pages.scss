@@ -1,0 +1,73 @@
+/* Pages */
+
+.page-template-page-static {
+
+    .wp-block-gallery,
+    .wp-block-image {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .alignwide {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+
+        .site-main {
+            width: calc( 100% * ( 12/16 ) );
+            margin-right: auto;
+            margin-left: auto;
+
+            .wp-block-gallery,
+            .wp-block-image {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .wp-block-gallery {
+                figure {
+                    border: 5px solid $color-photo-frame;
+                }
+            }
+
+            .alignwide {
+                width: 125%;
+                margin-left: -12.5%;
+
+                &.wp-block-image {
+                    img {
+                        width: 125%;
+                        max-width: 125%;
+                        height: auto;
+                    }
+                    figcaption {
+                         width: 125%;
+                         padding-right: 12.5%;
+                         padding-left: 12.5%;
+                         padding-top: .5rem;
+                    }
+                }
+
+                .blocks-gallery-item {
+                    height: 300px;
+                    overflow: hidden;
+                   img {
+                    //    width: 100%;
+                    //    height: auto;
+                        object-fit: cover;
+                   }
+                }
+            }
+        }
+
+        p + h2 {
+            margin-top: 2rem;
+        }
+
+    }
+
+}

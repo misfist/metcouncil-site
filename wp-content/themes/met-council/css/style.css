@@ -9850,6 +9850,9 @@ hr {
   height: 116px;
   width: auto; }
 
+figcaption {
+  font-family: "Archivo", sans-serif; }
+
 /* Main Nav */
 .navbar-expand-md .navbar-nav {
   text-transform: uppercase;
@@ -10052,6 +10055,48 @@ hr {
   color: #00548D;
   font-size: 1.875rem;
   font-weight: bold; }
+
+/* Pages */
+.page-template-page-static .wp-block-gallery,
+.page-template-page-static .wp-block-image {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.page-template-page-static .alignwide img {
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 768px) {
+  .page-template-page-static .site-main {
+    width: calc( 100% * ( 12/16 ));
+    margin-right: auto;
+    margin-left: auto; }
+    .page-template-page-static .site-main .wp-block-gallery,
+    .page-template-page-static .site-main .wp-block-image {
+      margin-top: 2rem;
+      margin-bottom: 2rem; }
+    .page-template-page-static .site-main .wp-block-gallery figure {
+      border: 5px solid #2E332C; }
+    .page-template-page-static .site-main .alignwide {
+      width: 125%;
+      margin-left: -12.5%; }
+      .page-template-page-static .site-main .alignwide.wp-block-image img {
+        width: 125%;
+        max-width: 125%;
+        height: auto; }
+      .page-template-page-static .site-main .alignwide.wp-block-image figcaption {
+        width: 125%;
+        padding-right: 12.5%;
+        padding-left: 12.5%;
+        padding-top: .5rem; }
+      .page-template-page-static .site-main .alignwide .blocks-gallery-item {
+        height: 300px;
+        overflow: hidden; }
+        .page-template-page-static .site-main .alignwide .blocks-gallery-item img {
+          -o-object-fit: cover;
+             object-fit: cover; }
+  .page-template-page-static p + h2 {
+    margin-top: 2rem; } }
 
 .block h2 {
   font-size: 1.25rem; }

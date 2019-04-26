@@ -7608,6 +7608,7 @@ h3  24/28
 */
   /* Content Sizes */
   /* Forms */
+  /* Pages */
   /** Columns **/
   /* General */
   /* Editor Only */ }
@@ -7707,6 +7708,8 @@ h3  24/28
   .edit-post-visual-editor .program-icon {
     height: 116px;
     width: auto; }
+  .edit-post-visual-editor figcaption {
+    font-family: "Archivo", sans-serif; }
   .edit-post-visual-editor #content {
     padding-top: 1.875rem; }
   .edit-post-visual-editor .entry-meta .category {
@@ -7787,6 +7790,44 @@ h3  24/28
     color: #00548D;
     font-size: 1.875rem;
     font-weight: bold; }
+  .edit-post-visual-editor .page-template-page-static .wp-block-gallery,
+  .edit-post-visual-editor .page-template-page-static .wp-block-image {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .edit-post-visual-editor .page-template-page-static .alignwide img {
+    width: 100%;
+    height: auto; }
+  @media (min-width: 768px) {
+    .edit-post-visual-editor .page-template-page-static .site-main {
+      width: calc( 100% * ( 12/16 ));
+      margin-right: auto;
+      margin-left: auto; }
+      .edit-post-visual-editor .page-template-page-static .site-main .wp-block-gallery,
+      .edit-post-visual-editor .page-template-page-static .site-main .wp-block-image {
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+      .edit-post-visual-editor .page-template-page-static .site-main .wp-block-gallery figure {
+        border: 5px solid #2E332C; }
+      .edit-post-visual-editor .page-template-page-static .site-main .alignwide {
+        width: 125%;
+        margin-left: -12.5%; }
+        .edit-post-visual-editor .page-template-page-static .site-main .alignwide.wp-block-image img {
+          width: 125%;
+          max-width: 125%;
+          height: auto; }
+        .edit-post-visual-editor .page-template-page-static .site-main .alignwide.wp-block-image figcaption {
+          width: 125%;
+          padding-right: 12.5%;
+          padding-left: 12.5%;
+          padding-top: .5rem; }
+        .edit-post-visual-editor .page-template-page-static .site-main .alignwide .blocks-gallery-item {
+          height: 300px;
+          overflow: hidden; }
+          .edit-post-visual-editor .page-template-page-static .site-main .alignwide .blocks-gallery-item img {
+            -o-object-fit: cover;
+               object-fit: cover; }
+    .edit-post-visual-editor .page-template-page-static p + h2 {
+      margin-top: 2rem; } }
   .edit-post-visual-editor .home #content {
     padding-top: 0; }
   .edit-post-visual-editor .jumbotron-fluid,
