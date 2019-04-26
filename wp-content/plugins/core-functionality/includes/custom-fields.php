@@ -1670,7 +1670,7 @@ if( function_exists( 'acf_add_local_field_group' ) ) {
   	),
   	'menu_order' => 0,
   	'position' => 'normal',
-  	'style' => 'seamless',
+  	'style' => 'default',
   	'label_placement' => 'top',
   	'instruction_placement' => 'label',
   	'hide_on_screen' => array(

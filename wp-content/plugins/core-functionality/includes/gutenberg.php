@@ -40,7 +40,7 @@ add_filter( 'block_categories', 'core_block_category', 10, 2 );
 function core_disable_editor( $id = false ) {
 
 	$excluded_templates = array(
-		'page-home.php'
+		'page-templates/page-home.php'
 	);
 
 	$excluded_ids = array(
