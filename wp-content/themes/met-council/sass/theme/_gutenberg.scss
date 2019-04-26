@@ -169,6 +169,11 @@ blockquote {
 }
 
 .wp-block-image {
+  
+}
+
+/* Media */
+.wp-block-image {
 
   @include media-breakpoint-down(md) {
     .alignleft,
@@ -181,17 +186,24 @@ blockquote {
         height: auto;
       }
     }
+
+    .alignfull {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      width: auto;
+      max-width: 1000%;
+    }
   }
 
 }
 
-/* General */
-.wp-block-image.alignfull,
-.alignfull {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  width: auto;
-  max-width: 1000%;
+.wp-block-gallery {
+  .blocks-gallery-item,
+  .blocks-gallery-image {
+    figcaption {
+      overflow-y: hidden;
+    }
+  }
 }
 
 .wp-block-advanced-gutenberg-blocks-intro {

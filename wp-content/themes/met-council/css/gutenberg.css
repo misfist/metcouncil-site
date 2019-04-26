@@ -7610,7 +7610,7 @@ h3  24/28
   /* Forms */
   /* Pages */
   /** Columns **/
-  /* General */
+  /* Media */
   /* Editor Only */ }
   .edit-post-visual-editor *:not(.content-area) ul {
     /* @include no-bullets; */ }
@@ -8447,13 +8447,15 @@ h3  24/28
       .edit-post-visual-editor .wp-block-image .alignleft img,
       .edit-post-visual-editor .wp-block-image .alignright img {
         width: 100%;
-        height: auto; } }
-  .edit-post-visual-editor .wp-block-image.alignfull,
-  .edit-post-visual-editor .alignfull {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: auto;
-    max-width: 1000%; }
+        height: auto; }
+    .edit-post-visual-editor .wp-block-image .alignfull {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      width: auto;
+      max-width: 1000%; } }
+  .edit-post-visual-editor .wp-block-gallery .blocks-gallery-item figcaption,
+  .edit-post-visual-editor .wp-block-gallery .blocks-gallery-image figcaption {
+    overflow-y: hidden; }
   .edit-post-visual-editor .wp-block-advanced-gutenberg-blocks-intro {
     color: #757575; }
     .edit-post-visual-editor .wp-block-advanced-gutenberg-blocks-intro p {

@@ -2,6 +2,10 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: $white;
+
+    @include media-breakpoint-up(md) {
+     padding-top: 4rem;
+   }
 }
 
 #wrapper-footer {
@@ -12,4 +16,5 @@
   a {
     color: $white;
   }
+
 }

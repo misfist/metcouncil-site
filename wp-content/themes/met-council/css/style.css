@@ -9950,6 +9950,9 @@ figcaption {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #fff; }
+  @media (min-width: 768px) {
+    #wrapper-footer-full {
+      padding-top: 4rem; } }
 
 #wrapper-footer {
   padding-top: 2.5rem;
@@ -11324,6 +11327,7 @@ blockquote {
   input.has-primary-background-color[type="button"], .wp-block-button .has-primary-background-color.wp-block-button__link {
     background-color: #0092D9; }
 
+/* Media */
 @media (max-width: 991.98px) {
   .wp-block-image .alignleft,
   .wp-block-image .alignright {
@@ -11332,15 +11336,16 @@ blockquote {
     .wp-block-image .alignleft img,
     .wp-block-image .alignright img {
       width: 100%;
-      height: auto; } }
+      height: auto; }
+  .wp-block-image .alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+    max-width: 1000%; } }
 
-/* General */
-.wp-block-image.alignfull,
-.alignfull {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  width: auto;
-  max-width: 1000%; }
+.wp-block-gallery .blocks-gallery-item figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption {
+  overflow-y: hidden; }
 
 .wp-block-advanced-gutenberg-blocks-intro {
   color: #757575; }
