@@ -218,97 +218,6 @@ if( function_exists( 'acf_add_local_field_group' ) ) {
 		'description' => '',
 	));
 
-  /* Campaign Details - Replace Default Metaboxes with Single Select Field */
-	// acf_add_local_field_group( array(
-	// 	'key' => 'group_5b9f2b166ef63',
-	// 	'title' => __( 'Campaign Details', 'core-functionality' ),
-	// 	'fields' => array(
-	// 		array(
-	// 			'key' => 'field_5b9f2b1e8c378',
-	// 			'label' => __( 'Campaign Status', 'core-functionality' ),
-	// 			'name' => 'campaign_status',
-	// 			'type' => 'taxonomy',
-	// 			'instructions' => '',
-	// 			'required' => 1,
-	// 			'conditional_logic' => 0,
-	// 			'wrapper' => array(
-	// 				'width' => '',
-	// 				'class' => '',
-	// 				'id' => '',
-	// 			),
-	// 			'taxonomy' => 'campaign-status',
-	// 			'field_type' => 'select',
-	// 			'allow_null' => 0,
-	// 			'add_term'   => 0,
-	// 			'save_terms' => 1,
-	// 			'load_terms' => 1,
-	// 			'return_format' => 'id',
-	// 			'multiple' => 0,
-	// 		),
-	// 		array(
-	// 			'key' => 'field_5ba277a381afd',
-	// 			'label' => __( 'Campaign Category', 'core-functionality' ),
-	// 			'name' => 'campaign_category',
-	// 			'type' => 'taxonomy',
-	// 			'instructions' => '',
-	// 			'required' => 1,
-	// 			'conditional_logic' => 0,
-	// 			'wrapper' => array(
-	// 				'width' => '',
-	// 				'class' => '',
-	// 				'id' => '',
-	// 			),
-	// 			'taxonomy' => 'campaign-category',
-	// 			'field_type' => 'select',
-	// 			'allow_null' => 0,
-	// 			'add_term'   => 1,
-	// 			'save_terms' => 1,
-	// 			'load_terms' => 1,
-	// 			'return_format' => 'id',
-	// 			'multiple' => 0,
-	// 		),
-	// 		array(
-	// 			'key' => 'field_5be1d774d6147',
-	// 			'label' => __( 'Featured on Home', 'core-functionality' ),
-	// 			'name' => 'featured',
-	// 			'type' => 'true_false',
-	// 			'instructions' => '',
-	// 			'required' => 0,
-	// 			'conditional_logic' => 0,
-	// 			'wrapper' => array(
-	// 				'width' => '',
-	// 				'class' => '',
-	// 				'id' => '',
-	// 			),
-	// 			'message' => '',
-	// 			'default_value' => 0,
-	// 			'ui' => 1,
-	// 			'ui_on_text' => __( 'Yes', 'core-functionality' ),
-	// 			'ui_off_text' => __( 'No', 'core-functionality' ),
-	// 		),
-	// 	),
-	// 	'location' => array(
-	// 		array(
-	// 			array(
-	// 				'param' => 'post_type',
-	// 				'operator' => '==',
-	// 				'value' => 'campaign',
-	// 			),
-	// 		),
-	// 	),
-	// 	'menu_order' => 0,
-	// 	'position' => 'side',
-	// 	'style' => 'default',
-	// 	'label_placement' => 'top',
-	// 	'instruction_placement' => 'label',
-	// 	'hide_on_screen' => array(
-	// 		0 => 'categories',
-	// 		1 => 'tags',
-	// 	),
-	// 	'active' => 1,
-	// 	'description' => '',
-	// ));
-
 	acf_add_local_field_group( array(
 		'key' => 'group_5b9f2b166ef63',
 		'title' => __( 'Campaign Details', 'core-functionality' ),
@@ -772,7 +681,7 @@ if( function_exists( 'acf_add_local_field_group' ) ) {
   			array(
 					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'page-home.php',
+					'value' => 'page-templates/page-home.php',
   			),
   		),
   	),
@@ -1755,7 +1664,7 @@ if( function_exists( 'acf_add_local_field_group' ) ) {
   			array(
 					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'page-home.php',
+					'value' => 'page-templates/page-home.php',
   			),
   		),
   	),
