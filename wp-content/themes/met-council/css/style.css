@@ -10564,6 +10564,18 @@ figcaption {
       text-align: left; }
       #wrapper-footer-full .tenant-module .wp-block-column:last-child:before {
         content: none; } }
+  #wrapper-footer-full .support-us {
+    text-align: center; }
+    #wrapper-footer-full .support-us h3 {
+      font-size: 1.5rem; }
+    #wrapper-footer-full .support-us a {
+      color: #00548D;
+      text-decoration: underline;
+      font-weight: bold; }
+  @media (min-width: 768px) {
+    #wrapper-footer-full .our-programs h3 {
+      color: #992EE6;
+      text-align: center; } }
 
 .footer-widgets-1 {
   display: -webkit-box;

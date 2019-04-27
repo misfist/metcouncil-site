@@ -111,6 +111,35 @@
     }
   }
 
+  .our-programs {}
+
+  .support-us {
+    text-align: center;
+
+    h3 {
+        font-size: $font-size-lg-5;
+    }
+
+    a {
+      color: $blue-darker;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+   @include media-breakpoint-up(md) {
+     
+    .our-programs {
+      h3 {
+        color: $info;
+        text-align: center;
+      }
+    }
+
+    .support-us {}
+
+   }
+
 }
 
 .footer-widgets-1 {
