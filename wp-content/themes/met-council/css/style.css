@@ -9870,6 +9870,11 @@ figcaption {
   .navbar-expand-md .navbar-nav .dropdown-menu {
     font-size: 0.875rem; }
 
+@media (min-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem; } }
+
 .navbar > .container,
 .navbar > .container-fluid {
   -ms-flex-wrap: initial;

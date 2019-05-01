@@ -27,6 +27,22 @@
   .dropdown-menu {
     font-size: $font-size-sm;
   }
+
+}
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {}
+  }
+
+  @include media-breakpoint-up(md) {
+    .navbar-nav {
+      .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
 }
 
 .navbar >.container,
