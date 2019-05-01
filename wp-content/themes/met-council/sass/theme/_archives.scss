@@ -47,6 +47,7 @@
 
   .block {
     margin-bottom: 2rem;
+    width: 100%;
 
     /* Grid */
     @include media-breakpoint-up(md) {

@@ -29,7 +29,7 @@ $font-size-base: 16px;
   --indigo: #6610f2;
   --purple: #992EE6;
   --pink: #e83e8c;
-  --red: #EF4619;
+  --red: #ef4619;
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
@@ -43,7 +43,7 @@ $font-size-base: 16px;
   --success: #28a745;
   --info: #992EE6;
   --warning: #ffc107;
-  --danger: #EF4619;
+  --danger: #ef4619;
   --light: #DEF2F9;
   --dark: #113C6B;
   --breakpoint-xs: 0;
@@ -2054,7 +2054,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #EF4619; }
+  color: #ef4619; }
 
 .invalid-tooltip {
   position: absolute;
@@ -2072,11 +2072,11 @@ textarea.form-control {
 .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
-  border-color: #EF4619; }
+  border-color: #ef4619; }
   .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
   .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
-    border-color: #EF4619;
+    border-color: #ef4619;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(239, 70, 25, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(239, 70, 25, 0.25); }
   .was-validated .form-control:invalid ~ .invalid-feedback,
@@ -2095,7 +2095,7 @@ textarea.form-control {
   display: block; }
 
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
-  color: #EF4619; }
+  color: #ef4619; }
 
 .was-validated .form-check-input:invalid ~ .invalid-feedback,
 .was-validated .form-check-input:invalid ~ .invalid-tooltip, .form-check-input.is-invalid ~ .invalid-feedback,
@@ -2103,7 +2103,7 @@ textarea.form-control {
   display: block; }
 
 .was-validated .custom-control-input:invalid ~ .custom-control-label, .custom-control-input.is-invalid ~ .custom-control-label {
-  color: #EF4619; }
+  color: #ef4619; }
   .was-validated .custom-control-input:invalid ~ .custom-control-label::before, .custom-control-input.is-invalid ~ .custom-control-label::before {
     background-color: #f7a690; }
 
@@ -2120,7 +2120,7 @@ textarea.form-control {
           box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(239, 70, 25, 0.25); }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
-  border-color: #EF4619; }
+  border-color: #ef4619; }
   .was-validated .custom-file-input:invalid ~ .custom-file-label::after, .custom-file-input.is-invalid ~ .custom-file-label::after {
     border-color: inherit; }
 
@@ -2409,8 +2409,8 @@ fieldset:disabled .edit-post-visual-editor .wp-block-button a.wp-block-button__l
 
 .btn-danger {
   color: #fff;
-  background-color: #EF4619;
-  border-color: #EF4619;
+  background-color: #ef4619;
+  border-color: #ef4619;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
   .btn-danger:hover {
@@ -2422,8 +2422,8 @@ fieldset:disabled .edit-post-visual-editor .wp-block-button a.wp-block-button__l
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(239, 70, 25, 0.5); }
   .btn-danger.disabled, .btn-danger:disabled {
     color: #fff;
-    background-color: #EF4619;
-    border-color: #EF4619; }
+    background-color: #ef4619;
+    border-color: #ef4619; }
   .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,
   .show > .btn-danger.dropdown-toggle {
     color: #fff;
@@ -2614,25 +2614,25 @@ fieldset:disabled .edit-post-visual-editor .wp-block-button a.wp-block-button__l
               box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-outline-danger {
-  color: #EF4619;
+  color: #ef4619;
   background-color: transparent;
   background-image: none;
-  border-color: #EF4619; }
+  border-color: #ef4619; }
   .btn-outline-danger:hover {
     color: #fff;
-    background-color: #EF4619;
-    border-color: #EF4619; }
+    background-color: #ef4619;
+    border-color: #ef4619; }
   .btn-outline-danger:focus, .btn-outline-danger.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(239, 70, 25, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(239, 70, 25, 0.5); }
   .btn-outline-danger.disabled, .btn-outline-danger:disabled {
-    color: #EF4619;
+    color: #ef4619;
     background-color: transparent; }
   .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,
   .show > .btn-outline-danger.dropdown-toggle {
     color: #fff;
-    background-color: #EF4619;
-    border-color: #EF4619; }
+    background-color: #ef4619;
+    border-color: #ef4619; }
     .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-danger.dropdown-toggle:focus {
       -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(239, 70, 25, 0.5);
@@ -4298,7 +4298,7 @@ input[type="button"].btn-block {
 
 .badge-danger {
   color: #fff;
-  background-color: #EF4619; }
+  background-color: #ef4619; }
   .badge-danger[href]:hover, .badge-danger[href]:focus {
     color: #fff;
     text-decoration: none;
@@ -5289,7 +5289,7 @@ button.bg-warning:focus {
   background-color: #d39e00 !important; }
 
 .bg-danger {
-  background-color: #EF4619 !important; }
+  background-color: #ef4619 !important; }
 
 a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
@@ -5364,7 +5364,7 @@ button.bg-dark:focus {
   border-color: #ffc107 !important; }
 
 .border-danger {
-  border-color: #EF4619 !important; }
+  border-color: #ef4619 !important; }
 
 .border-light {
   border-color: #DEF2F9 !important; }
@@ -7483,7 +7483,7 @@ a.text-warning:hover, a.text-warning:focus {
   color: #d39e00 !important; }
 
 .text-danger {
-  color: #EF4619 !important; }
+  color: #ef4619 !important; }
 
 a.text-danger:hover, a.text-danger:focus {
   color: #c7350e !important; }
@@ -7673,11 +7673,12 @@ h3  24/28
     @media (min-width: 768px) {
       .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
       .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
-        padding: 1rem 2.75rem; } }
+        padding: .875rem 2.75rem; } }
     @media (min-width: 992px) {
       .edit-post-visual-editor .btn:not(.submit), .edit-post-visual-editor input:not(.submit)[type="submit"],
       .edit-post-visual-editor input:not(.submit)[type="button"], .edit-post-visual-editor .wp-block-button .wp-block-button__link:not(.submit) {
-        padding: 1rem 3.75rem; } }
+        padding-right: 3.75rem;
+        padding-left: 3.75rem; } }
   .edit-post-visual-editor hr {
     border-top-color: #dee2e6; }
     @media (min-width: 768px) {
@@ -7835,13 +7836,13 @@ h3  24/28
     margin-bottom: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     text-align: center; }
     .edit-post-visual-editor .jumbotron-fluid .entry-subtitle,
     .edit-post-visual-editor .jumbotron-fluid .hero-subtitle,
     .edit-post-visual-editor .wp-block-corefunctionality-hero-element .entry-subtitle,
     .edit-post-visual-editor .wp-block-corefunctionality-hero-element .hero-subtitle {
-      color: #FA655A; }
+      color: #ef4619; }
     .edit-post-visual-editor .jumbotron-fluid .entry-title,
     .edit-post-visual-editor .jumbotron-fluid .entry-content,
     .edit-post-visual-editor .jumbotron-fluid .hero-title,
@@ -7870,7 +7871,10 @@ h3  24/28
       .edit-post-visual-editor .wp-block-corefunctionality-hero-element .hero-subtitle,
       .edit-post-visual-editor .wp-block-corefunctionality-hero-element .hero-title,
       .edit-post-visual-editor .wp-block-corefunctionality-hero-element .hero-content {
-        text-align: initial; } }
+        text-align: initial; }
+      .edit-post-visual-editor .jumbotron-fluid .container,
+      .edit-post-visual-editor .wp-block-corefunctionality-hero-element .container {
+        padding-left: 0; } }
   .edit-post-visual-editor .section-title,
   .edit-post-visual-editor .entry-subtitle,
   .edit-post-visual-editor .block-title,
@@ -7896,20 +7900,25 @@ h3  24/28
     .edit-post-visual-editor .section-group.help_answers {
       background-color: #00548D;
       color: #4BB9EB; }
+      .edit-post-visual-editor .home-section.help_answers .section-title,
+      .edit-post-visual-editor .section-group.help_answers .section-title {
+        margin-bottom: 0; }
       .edit-post-visual-editor .home-section.help_answers article,
       .edit-post-visual-editor .section-group.help_answers article {
         position: relative;
         padding-left: 70px; }
         .edit-post-visual-editor .home-section.help_answers article:before,
         .edit-post-visual-editor .section-group.help_answers article:before {
-          font-family: 'FontAwesome';
-          content: '\f2cc';
-          font-size: 70px;
+          background-image: url(../images/icon-question.png);
+          background-size: 100%;
+          background-position: center top;
+          display: block;
+          content: '';
           position: absolute;
+          height: 56px;
+          width: 56px;
           top: 0;
-          left: 0;
-          margin-top: -24px;
-          margin-left: -10px; }
+          left: 0; }
       .edit-post-visual-editor .home-section.help_answers ul,
       .edit-post-visual-editor .section-group.help_answers ul {
         margin: 0;
@@ -8055,6 +8064,9 @@ h3  24/28
     .edit-post-visual-editor .home-section .block h3,
     .edit-post-visual-editor .section-group .block h3 {
       margin-bottom: 1.25rem; }
+    .edit-post-visual-editor .home-section .block .block-title,
+    .edit-post-visual-editor .section-group .block .block-title {
+      margin-bottom: .25rem; }
     .edit-post-visual-editor .home-section .block .section-image,
     .edit-post-visual-editor .section-group .block .section-image {
       margin-bottom: 1.25rem; }
@@ -8103,7 +8115,7 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.newsletter label,
     .edit-post-visual-editor .section-group .block.newsletter input:not([type="submit"]),
     .edit-post-visual-editor .section-group .block.newsletter ::-webkit-input-placeholder {
-      color: #EF4619; }
+      color: #ef4619; }
     .edit-post-visual-editor .home-section .block.subscribe h2,
     .edit-post-visual-editor .home-section .block.subscribe label,
     .edit-post-visual-editor .home-section .block.subscribe input:not([type="submit"]),
@@ -8119,7 +8131,7 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.newsletter label,
     .edit-post-visual-editor .section-group .block.newsletter input:not([type="submit"]),
     .edit-post-visual-editor .section-group .block.newsletter ::-ms-input-placeholder {
-      color: #EF4619; }
+      color: #ef4619; }
     .edit-post-visual-editor .home-section .block.subscribe h2,
     .edit-post-visual-editor .home-section .block.subscribe label,
     .edit-post-visual-editor .home-section .block.subscribe input:not([type="submit"]),
@@ -8135,11 +8147,7 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.newsletter label,
     .edit-post-visual-editor .section-group .block.newsletter input:not([type="submit"]),
     .edit-post-visual-editor .section-group .block.newsletter ::placeholder {
-      color: #EF4619; }
-    .edit-post-visual-editor .home-section .block.subscribe input, .edit-post-visual-editor .home-section .block.newsletter input,
-    .edit-post-visual-editor .section-group .block.subscribe input,
-    .edit-post-visual-editor .section-group .block.newsletter input {
-      border: 1px solid #EF4619; }
+      color: #ef4619; }
     .edit-post-visual-editor .home-section .block.subscribe .btn, .edit-post-visual-editor .home-section .block.subscribe input[type="submit"],
     .edit-post-visual-editor .home-section .block.subscribe input[type="button"], .edit-post-visual-editor .home-section .block.subscribe .wp-block-button .wp-block-button__link, .edit-post-visual-editor .wp-block-button .home-section .block.subscribe .wp-block-button__link, .edit-post-visual-editor .home-section .block.newsletter .btn, .edit-post-visual-editor .home-section .block.newsletter input[type="submit"],
     .edit-post-visual-editor .home-section .block.newsletter input[type="button"], .edit-post-visual-editor .home-section .block.newsletter .wp-block-button .wp-block-button__link, .edit-post-visual-editor .wp-block-button .home-section .block.newsletter .wp-block-button__link,
@@ -8153,7 +8161,19 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.newsletter input[type="button"],
     .edit-post-visual-editor .section-group .block.newsletter .wp-block-button .wp-block-button__link,
     .edit-post-visual-editor .wp-block-button .section-group .block.newsletter .wp-block-button__link {
-      background-color: #EF4619; }
+      background-color: #ef4619; }
+    .edit-post-visual-editor .home-section .block.subscribe input[type="email"], .edit-post-visual-editor .home-section .block.newsletter input[type="email"],
+    .edit-post-visual-editor .section-group .block.subscribe input[type="email"],
+    .edit-post-visual-editor .section-group .block.newsletter input[type="email"] {
+      border: 1px solid #ef4619;
+      background-image: url(../images/email-icon.svg);
+      background-position: left 0 top -3px;
+      background-repeat: no-repeat;
+      background-size: 3rem;
+      text-indent: 2rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      height: 2.75rem; }
     .edit-post-visual-editor .home-section .block.twitter,
     .edit-post-visual-editor .section-group .block.twitter {
       font-family: "Archivo", sans-serif; }
@@ -8195,6 +8215,9 @@ h3  24/28
       .edit-post-visual-editor .section-group .block.twitter .wp-block-button .wp-block-button__link,
       .edit-post-visual-editor .wp-block-button .section-group .block.twitter .wp-block-button__link {
         background-color: #0092D9; }
+      .edit-post-visual-editor .home-section .block.twitter iframe,
+      .edit-post-visual-editor .section-group .block.twitter iframe {
+        margin-bottom: -2rem !important; }
     .edit-post-visual-editor .home-section .block.event h2,
     .edit-post-visual-editor .home-section .block.event h3.event-title a,
     .edit-post-visual-editor .home-section .block.event label,
@@ -8310,6 +8333,9 @@ h3  24/28
         right: 0;
         padding: 2.5rem;
         background-color: rgba(0, 146, 217, 0.7); } }
+  .edit-post-visual-editor #email-icon .img-top,
+  .edit-post-visual-editor #email-icon .img-bottom {
+    fill: #ef4619; }
   .edit-post-visual-editor .wp-block-column:not(:last-child) {
     margin-right: 0; }
   .edit-post-visual-editor .wp-block-column:not(:first-child),
@@ -8430,10 +8456,10 @@ h3  24/28
     margin-bottom: 2rem;
     text-align: center; }
   .edit-post-visual-editor .has-orange-background-color {
-    background-color: #EF4619; }
+    background-color: #ef4619; }
     .edit-post-visual-editor .has-orange-background-color.btn, .edit-post-visual-editor input.has-orange-background-color[type="submit"],
     .edit-post-visual-editor input.has-orange-background-color[type="button"], .edit-post-visual-editor .wp-block-button .has-orange-background-color.wp-block-button__link {
-      background-color: #EF4619; }
+      background-color: #ef4619; }
   .edit-post-visual-editor .has-primary-background-color {
     background-color: #0092D9; }
     .edit-post-visual-editor .has-primary-background-color.btn, .edit-post-visual-editor input.has-primary-background-color[type="submit"],
@@ -8517,14 +8543,14 @@ h3  24/28
     padding-top: 2.125rem;
     margin-bottom: 2.125rem;
     padding-bottom: 2.125rem;
-    color: #EF4619;
-    border-top: 3px solid #EF4619;
-    border-bottom: 3px solid #EF4619;
+    color: #ef4619;
+    border-top: 3px solid #ef4619;
+    border-bottom: 3px solid #ef4619;
     /* Don't show Spanish Disclaimer */ }
     .edit-post-visual-editor #legal-disclaimer a,
     .edit-post-visual-editor .legal-disclaimer a {
-      color: #EF4619;
-      border-bottom: 1px solid #EF4619;
+      color: #ef4619;
+      border-bottom: 1px solid #ef4619;
       text-decoration: none; }
     .edit-post-visual-editor #legal-disclaimer .widget-title,
     .edit-post-visual-editor #legal-disclaimer h3.section-title,
