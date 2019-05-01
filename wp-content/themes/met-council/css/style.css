@@ -9943,8 +9943,15 @@ figcaption {
     text-decoration: none; }
 
 .navbar-brand img {
-  max-width: 100%;
-  height: auto; }
+  height: 80px;
+  width: 250px; }
+
+@media (min-width: 768px) {
+  .navbar-brand img {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: -1rem; } }
 
 #wrapper-footer-full {
   padding-top: 2rem;
@@ -9961,6 +9968,23 @@ figcaption {
   color: #fff; }
   #wrapper-footer a {
     color: #fff; }
+
+.footer-logo {
+  padding: 1rem;
+  width: 100%;
+  text-align: center; }
+  .footer-logo img {
+    max-width: 100%;
+    height: 80px;
+    width: auto; }
+  @media (min-width: 768px) {
+    .footer-logo {
+      text-align: initial; }
+      .footer-logo img {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        left: -1rem; } }
 
 #content {
   padding-top: 1.875rem; }
@@ -10574,7 +10598,7 @@ figcaption {
       font-weight: bold; }
   @media (min-width: 768px) {
     #wrapper-footer-full .our-programs h3 {
-      color: #992EE6;
+      color: #6D3695;
       text-align: center; } }
 
 .footer-widgets-1 {
@@ -10641,12 +10665,6 @@ figcaption {
   .footer-widgets-1 .widget_search .submit,
   .footer-widgets-1 .widget_search ::placeholder {
     color: #4BB9EB; }
-  .footer-widgets-1 .footer-logo {
-    padding: 1rem;
-    width: 100%; }
-    .footer-widgets-1 .footer-logo img {
-      max-width: 100%;
-      height: auto; }
 
 /* Show Spanish Disclaimer When on Spanish Language Page */
 .language-espanol #legal-disclaimer .english-text {

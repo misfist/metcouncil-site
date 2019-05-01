@@ -28,13 +28,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+					<div class="header-intro">
+						<?php the_excerpt(); ?>
+					</div>
+
 				</header><!-- .entry-header -->
 
-				<?php if( $intro = get_post_meta( get_the_ID(), 'action_text', true ) ) : ?>
-					<?php echo apply_filters( 'the_content', $intro ); ?>
-				<?php endif; ?>
-
 				<?php if( function_exists( 'have_rows' ) && have_rows( 'links' ) ) : ?>
+					<h3 class="action-title">
+						<?php if( $action_text = get_post_meta( $post->ID, 'action_text', true ) ) : ?>
+							<?php echo $action_text; ?>
+						<?php else : ?>
+							<?php esc_html_e( 'Act Now', 'tenant' ); ?>
+						<?php endif; ?>
+					</h3>
 					<ol class="action-links">
 						<?php while ( have_rows( 'links' ) ) : the_row(); ?>
 							<?php $link = get_sub_field( 'link' ); ?>

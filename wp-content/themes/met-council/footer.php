@@ -30,10 +30,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="footer-widgets-1">
 
-							<?php if( has_custom_logo() ) : ?>
+							<?php if( $footer_image = get_theme_mod( 'footer_image' ) ) : ?>
 
 								<div class="footer-logo">
-									<?php the_custom_logo(); ?>
+									<?php echo sprintf( 
+										'<a href="%1$s"><img src="%2$s" class="alternate-logo"></a>',
+										home_url(),
+										esc_url( $footer_image )
+									); ?>
 								</div>
 
 							<?php endif; ?>

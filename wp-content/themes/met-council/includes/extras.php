@@ -7,6 +7,22 @@
  */
 
 /**
+ * Replaces logo CSS class.
+ *
+ * @param string $html Markup.
+ *
+ * @return mixed
+ */
+function understrap_change_logo_class( $html ) {
+
+  // $html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
+  $html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
+  $html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
+
+  return $html;
+}
+
+/**
  * Add Body Classes
  *
  * @param  array $classes
@@ -64,15 +80,19 @@ add_filter( 'get_the_archive_title', 'metcouncil_the_archive_title' );
  *
  * @return string
  */
-function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+ function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+
+  $button_text = ( 'campaign' === get_post_type() ) ? __( 'Take Action', 'metcoauncil' ) : __( 'Learn More', 'metcoauncil' );
 
   if( $manual_excerpt = get_post_field( 'post_excerpt', get_the_ID() ) ) {
-    return $manual_excerpt . '<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Learn More',
-    'metcouncil' ) . '</a></p>';
+    return $manual_excerpt . '<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . $button_text . '</a></p>';
   }
 
-  return $post_excerpt . '... <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Learn More',
-  'metcouncil' ) . '</a></p>';
+  if( 'campaign' === get_post_type() && !is_singular( 'campaign' ) ) {
+    return $post_excerpt . '<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . $button_text . '</a></p>';
+  }
+
+  return $post_excerpt;
 
 }
 
@@ -117,17 +137,23 @@ add_filter( 'excerpt_length', 'metcouncil_excerpt_length', 999 );
 function metcouncil_campaign_pre_get_posts( $query ) {
     if ( !is_admin() && $query->is_main_query() ) {
 
-      if( is_post_type_archive( 'campaign' ) ) {
+      if( is_post_type_archive( 'campaign' ) || is_tax( 'campaign-status' ) ) {
 
-        $tax_query = array(
-          array(
-              'taxonomy'         => 'campaign-status',
-              'terms'            => 'active',
-              'field'            => 'slug',
-          ),
-        );
-        $query->set( 'tax_query', $tax_query );
+        if( 'inactive' !== get_query_var( 'campaign-status' ) ) {
 
+          $tax_query = array(
+            array(
+                'taxonomy'         => 'campaign-status',
+                'terms'            => 'inactive',
+                'field'            => 'slug',
+                'operator'         => 'NOT IN',
+            ),
+          );
+          $query->set( 'tax_query', $tax_query );
+
+        }
+
+        $query->set( 'post_parent', 0 );
 
       }
 
@@ -138,20 +164,6 @@ function metcouncil_campaign_pre_get_posts( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'metcouncil_campaign_pre_get_posts' );
-
-/**
- * Modify Breadcrumb li attributes
- *
- * @link https://mtekk.us/code/breadcrumb-navxt/breadcrumb-navxt-doc/2/#bcn_display_attributes
- *
- * @param  string $li_attributes
- * @return string $li_attributes
- */
-function metcouncil_bcn_display_attributes( $li_attributes ) {
-  $li_attributes = ' class="breadcrumb-item"';
-  return $li_attributes;
-}
-add_filter( 'bcn_display_attributes', 'metcouncil_bcn_display_attributes' );
 
 /**
  * Translate the_title
@@ -170,3 +182,21 @@ function metcouncil_the_title( $title ) {
   return $title;
 }
 add_filter( 'the_title', 'metcouncil_the_title', 10, 2 );
+
+/**
+ * Filter `post_class` to include class if no thumbnail
+ * 
+ * @param array $classes
+ * @return array $classes
+ */
+ function metcouncil_post_class( $classes ) {
+  global $post;
+  if( has_post_thumbnail( $post->ID ) ) {
+    $classes[] = "has-post-thumbnail";
+  } else {
+    $classes[] = "has-no-thumbnail";
+  }
+
+  return $classes;
+}
+add_filter( 'post_class', 'metcouncil_post_class' );

@@ -14,6 +14,11 @@ include_once trailingslashit( get_stylesheet_directory() ) . 'includes/setup.php
 include_once trailingslashit( get_stylesheet_directory() ) . 'includes/enqueue.php';
 
 /**
+ * Load customizer functions
+ */
+ include_once trailingslashit( get_stylesheet_directory() ) . 'includes/customizer.php';
+
+/**
  * Load extra functions
  */
 include_once trailingslashit( get_stylesheet_directory() ) . 'includes/extras.php';
