@@ -85,7 +85,7 @@ add_filter( 'get_the_archive_title', 'metcouncil_the_archive_title' );
   $button_text = ( 'campaign' === get_post_type() ) ? __( 'Take Action', 'metcoauncil' ) : __( 'Learn More', 'metcoauncil' );
 
   if( $manual_excerpt = get_post_field( 'post_excerpt', get_the_ID() ) ) {
-    return $manual_excerpt . '<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . $button_text . '</a></p>';
+    return $manual_excerpt;
   }
 
   if( 'campaign' === get_post_type() && !is_singular( 'campaign' ) ) {
@@ -108,8 +108,7 @@ add_filter( 'get_the_archive_title', 'metcouncil_the_archive_title' );
 function metcouncil_get_the_excerpt( $excerpt ) {
 
   if( preg_match( "/\p{Han}+/u", $excerpt ) ) {
-      $excerpt = mb_substr( $excerpt, 0, 125 ) . '... <p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __( 'Learn More',
-	'metcouncil' ) . '</a></p>';
+      $excerpt = mb_substr( $excerpt, 0, 60 ) . '...';
   }
   return $excerpt;
 }
