@@ -168,43 +168,23 @@
   margin-top: 0;
 }
 
+/* Show Spanish Disclaimer When on Spanish Language Page */
+.language-espanol {
+
+  #legal-disclaimer {
+    .english-text {
+      display: none;
+    }
+
+    .spanish-text {
+      display: flex;
+    }
+  }
+}
+
 .footer-widgets-1 {
-  @include make-row;
 
-  .widget {
-    @include make-col-ready();
-
-    ul {
-      @include no-bullets;
-    }
-  }
-
-  .widget-first {
-    @include media-breakpoint-up(md) {
-        @include make-col(4);
-    }
-  }
-
-  .widget-last {
-    @include media-breakpoint-up(md) {
-        @include make-col(12);
-    }
-    .menu {
-      @include make-row;
-
-      & > li {
-        @include make-col-ready();
-
-        @include media-breakpoint-up(md) {
-            flex-basis: calc( 100% / 5 );
-        }
-
-      }
-    }
-
-  }
-
-  .widget_search {
+    .widget_search {
     .form-control,
     .submit {
       background-color: transparent;
@@ -219,20 +199,6 @@
     .submit {}
   }
 
-}
-
-/* Show Spanish Disclaimer When on Spanish Language Page */
-.language-espanol {
-
-  #legal-disclaimer {
-    .english-text {
-      display: none;
-    }
-
-    .spanish-text {
-      display: flex;
-    }
-  }
 }
 
 .entry-related-content {

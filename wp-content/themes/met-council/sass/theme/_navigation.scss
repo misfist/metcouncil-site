@@ -69,9 +69,10 @@
     }
 
     ul li {
-      margin-bottom: .75rem;
+      margin-bottom: 1rem;
       text-transform: none;
       font-size: $font-size-lg;
+      line-height: 1.25;
 
       a {
         color: $white;
@@ -105,6 +106,7 @@
 .social-menu,
 .jetpack-social-navigation {
   font-size: $font-size-lg-5;
+
   ul {
     @include no-bullets;
   }
@@ -112,5 +114,11 @@
   a:hover,
   a:focus {
     text-decoration: none;
+  }
+}
+
+.footer-widgets-2 {
+  .social-menu {
+    font-size: $font-size-lg-3;
   }
 }

@@ -31,6 +31,19 @@
         'settings'   => 'footer_image',
       )
   ) );
+
+  $wp_customize->add_setting( 'copyright' , array(
+    'type'          => 'theme_mod',
+    'transport'     => 'refresh',
+    'default'       => __( 'Metropolitan Council on Housing is a 501(c)(4) nonprofit organization.', 'metcouncil' ),
+  ) );
+
+  $wp_customize->add_control( 'copyright_control', array(
+    'label'      => __( 'Copyright', 'metcouncil' ),
+    'section'    => 'title_tagline',
+    'settings'   => 'copyright',
+    'type'       => 'textarea',
+  ) );
       
 }
   add_action( 'customize_register', 'metcouncil_customize_register' );

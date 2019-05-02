@@ -20,53 +20,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="row">
+		<footer class="site-footer" id="colophon">
 
-			<div class="col-md-16">
+			<?php if( is_active_sidebar( 'footer-1' ) ) : ?>
 
-				<footer class="site-footer" id="colophon">
+				<div class="footer-widgets-1">
 
-					<?php if( is_active_sidebar( 'footer-1' ) ) : ?>
+					<?php if( $footer_image = get_theme_mod( 'footer_image' ) ) : ?>
 
-						<div class="footer-widgets-1">
-
-							<?php if( $footer_image = get_theme_mod( 'footer_image' ) ) : ?>
-
-								<div class="footer-logo">
-									<?php echo sprintf( 
-										'<a href="%1$s"><img src="%2$s" class="alternate-logo"></a>',
-										home_url(),
-										esc_url( $footer_image )
-									); ?>
-								</div>
-
-							<?php endif; ?>
-
-							<?php dynamic_sidebar( 'footer-1' ); ?>
-
-						</div><!-- .footer-widgets-1 -->
+						<div class="footer-logo">
+							<?php echo sprintf( 
+								'<a href="%1$s" rel="home" itemprop="url"><img src="%2$s" class="alternate-logo"></a>',
+								home_url(),
+								esc_url( $footer_image )
+							); ?>
+						</div>
 
 					<?php endif; ?>
 
-					<div class="footer-widgets-2">
+					<?php dynamic_sidebar( 'footer-1' ); ?>
 
-						<?php understrap_components_social_menu(); ?>
+				</div><!-- .footer-widgets-1 -->
 
-					</div><!-- .footer-widgets-2 -->
+			<?php endif; ?>
 
-					<?php if( is_active_sidebar( 'site-info' ) ) : ?>
-					<div class="site-info">
+			<div class="footer-widgets-2">
 
-						<?php dynamic_sidebar( 'site-info' ); ?>
+				<?php understrap_components_social_menu(); ?>
 
-					</div><!-- .site-info -->
-					<?php endif; ?>
+			</div><!-- .footer-widgets-2 -->
 
-				</footer><!-- #colophon -->
+			<div class="site-info">
 
-			</div><!--col end -->
+				&copy; <?php echo date("Y"); ?> <?php echo get_theme_mod( 'copyright', esc_html__( 'Metropolitan Council on Housing is a 501(c)(4) nonprofit organization.', 'metcouncil' ) ); ?>
 
-		</div><!-- row end -->
+			</div><!-- .site-info -->
+
+		</footer><!-- #colophon -->
 
 	</div><!-- container end -->
 

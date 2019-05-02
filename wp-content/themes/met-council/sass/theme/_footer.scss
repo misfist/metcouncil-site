@@ -1,3 +1,7 @@
+.site-footer {
+  @include make-row;
+}
+
 #wrapper-footer-full {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -17,6 +21,96 @@
     color: $white;
   }
 
+}
+
+.footer-widgets-1 {
+
+  .widget {
+    @include make-col-ready();
+
+    ul {
+      @include no-bullets;
+    }
+  }
+
+  .footer-logo {}
+
+  .widget-first {}
+
+  .widget-last {
+
+    .menu {
+      @include make-row;
+
+      & > li {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+            flex-basis: calc( 100% / 5 );
+        }
+
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+
+    @include make-row;
+    align-items: center;
+
+    .footer-logo {
+      @include make-col($grid-columns/2);
+    }
+
+    .widget-first {
+      @include make-col($grid-columns/2);
+    }
+
+    .widget-last {
+      @include make-col($grid-columns);
+      padding-left: 4rem;
+    }
+
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    .footer-logo {
+      @include make-col($grid-columns * .6666);
+    }
+
+    .widget-first {
+      @include make-col($grid-columns * .3333);
+    }
+
+  }
+
+}
+
+.footer-widgets-2 {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    @include make-col($grid-columns/2);
+    text-align: initial;
+  }
+}
+
+.site-info {
+  width: 100%;
+  text-align: center;
+  font-size: $font-size-xs;
+
+
+  @include media-breakpoint-up(md) {
+    margin-top: 2rem;
+    align-self: center;
+    @include make-col($grid-columns/2);
+    text-align: initial;
+  }
 }
 
 .footer-logo {
