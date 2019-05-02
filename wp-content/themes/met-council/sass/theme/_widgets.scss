@@ -1,5 +1,7 @@
-#wrapper-footer-full { 
+#wrapper-footer-full {
+  margin-top: 3rem;
   align-items: center;
+  background-color: $gray-100;
 
   .widget {
     width: 100%;
@@ -144,6 +146,9 @@
   }
 
    @include media-breakpoint-up(md) {
+
+     margin-top: 5rem;
+     padding-bottom: 3.25rem;
      
     .our-programs-module {
       h3 {
@@ -155,6 +160,12 @@
 
    }
 
+}
+
+/* Don't apply top margin to pages that have dark background above */
+.home #wrapper-footer-full,
+.archive #wrapper-footer-full {
+  margin-top: 0;
 }
 
 .footer-widgets-1 {

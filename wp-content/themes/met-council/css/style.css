@@ -2835,7 +2835,7 @@ input[type="button"].btn-block {
   .dropdown-item:hover, .dropdown-item:focus {
     color: #141414;
     text-decoration: none;
-    background-color: #f8f9fa; }
+    background-color: #f0f0f0; }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
@@ -4471,7 +4471,7 @@ input[type="button"].btn-block {
   .list-group-item-action:hover, .list-group-item-action:focus {
     color: #4D4D4D;
     text-decoration: none;
-    background-color: #f8f9fa; }
+    background-color: #f0f0f0; }
   .list-group-item-action:active {
     color: #212121;
     background-color: #e9ecef; }
@@ -10503,9 +10503,11 @@ figcaption {
     padding-top: 2rem; } }
 
 #wrapper-footer-full {
+  margin-top: 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  background-color: #f0f0f0; }
   #wrapper-footer-full .widget {
     width: 100%; }
   #wrapper-footer-full .footer-widget {
@@ -10634,8 +10636,16 @@ figcaption {
       text-decoration: underline;
       font-weight: bold; }
   @media (min-width: 768px) {
-    #wrapper-footer-full .our-programs-module h3 {
-      text-align: center; } }
+    #wrapper-footer-full {
+      margin-top: 5rem;
+      padding-bottom: 3.25rem; }
+      #wrapper-footer-full .our-programs-module h3 {
+        text-align: center; } }
+
+/* Don't apply top margin to pages that have dark background above */
+.home #wrapper-footer-full,
+.archive #wrapper-footer-full {
+  margin-top: 0; }
 
 .footer-widgets-1 {
   display: -webkit-box;
