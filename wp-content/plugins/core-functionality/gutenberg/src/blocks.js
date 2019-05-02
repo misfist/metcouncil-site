@@ -10,8 +10,8 @@
  */
 
 import './group';
-import './subhead';
+// import './subhead';
 import './summary';
-import './intro';
+// import './intro';
 import './translation';
 import './clipboard';

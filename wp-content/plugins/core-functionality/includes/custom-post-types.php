@@ -52,9 +52,9 @@ if ( ! function_exists( 'core_campaign_post_type' ) ) {
     $args = array(
       'label'                 => __( 'Campaign', 'core-functionality' ),
       'labels'                => $labels,
-      'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+      'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ),
       'taxonomies'            => array( 'campaign-category' ),
-      'hierarchical'          => false,
+      'hierarchical'          => true,
       'public'                => true,
       'show_ui'               => true,
       'show_in_menu'          => true,
@@ -264,7 +264,7 @@ function core_kb_register_post_type_args( $args, $post_type ) {
   $custom_args = array(
     'label'                 => __( 'Article', 'core-functionality' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions' ),
+    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions', 'page-attributes', 'excerpt' ),
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
