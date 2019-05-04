@@ -7591,6 +7591,7 @@ a.text-dark:hover, a.text-dark:focus {
   /**
  * Screen Reader Text
  */
+  /* Campaign */
   /**
 h1  48/64
     40/48
@@ -7614,6 +7615,60 @@ h3  24/28
   /* Editor Only */ }
   .edit-post-visual-editor *:not(.content-area) ul {
     /* @include no-bullets; */ }
+  .edit-post-visual-editor .home-section.campaigns .campaign,
+  .edit-post-visual-editor .section-group.campaigns .campaign {
+    margin-bottom: 1.5rem;
+    background-size: 100%;
+    background-position: center top;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-repeat: no-repeat; }
+    .edit-post-visual-editor .home-section.campaigns .campaign .entry-title, .edit-post-visual-editor .section-group.campaigns .campaign .entry-title {
+      margin-bottom: 1rem; }
+      .edit-post-visual-editor .home-section.campaigns .campaign .entry-title a, .edit-post-visual-editor .section-group.campaigns .campaign .entry-title a {
+        font-weight: bold; }
+    .edit-post-visual-editor .home-section.campaigns .campaign .entry-body, .edit-post-visual-editor .section-group.campaigns .campaign .entry-body {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 148px;
+      background-color: #0092d9;
+      text-align: center;
+      color: #fff; }
+      .edit-post-visual-editor .home-section.campaigns .campaign .entry-body a, .edit-post-visual-editor .section-group.campaigns .campaign .entry-body a {
+        color: #fff; }
+    .edit-post-visual-editor .home-section.campaigns .campaign .entry-content, .edit-post-visual-editor .section-group.campaigns .campaign .entry-content {
+      font-size: 1.125rem; }
+    .edit-post-visual-editor .home-section.campaigns .campaign .section-footer, .edit-post-visual-editor .section-group.campaigns .campaign .section-footer {
+      margin-top: 2rem;
+      font-size: 1.125rem; }
+      .edit-post-visual-editor .home-section.campaigns .campaign .section-footer a, .edit-post-visual-editor .section-group.campaigns .campaign .section-footer a {
+        color: #fff;
+        text-decoration: underline; }
+    @media (min-width: 768px) {
+      .edit-post-visual-editor .home-section.campaigns .campaign,
+      .edit-post-visual-editor .section-group.campaigns .campaign {
+        background-size: cover;
+        min-height: 458px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-right: -1rem;
+        margin-left: -1rem;
+        margin-bottom: 2.5rem; }
+        .edit-post-visual-editor .home-section.campaigns .campaign .section-title, .edit-post-visual-editor .section-group.campaigns .campaign .section-title {
+          margin-bottom: .8rem;
+          text-align: initial; }
+        .edit-post-visual-editor .home-section.campaigns .campaign .entry-body, .edit-post-visual-editor .section-group.campaigns .campaign .entry-body {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 31.25%;
+                  flex: 0 0 31.25%;
+          max-width: 31.25%;
+          margin-left: 68.75%;
+          margin-top: 0;
+          padding: 2.5rem; } }
   .edit-post-visual-editor h1 {
     margin-bottom: 1rem;
     font-size: 2.5rem; }
@@ -8012,49 +8067,13 @@ h3  24/28
     .edit-post-visual-editor .home-section.campaigns,
     .edit-post-visual-editor .section-group.campaigns {
       background-color: #212121; }
-      .edit-post-visual-editor .home-section.campaigns .campaign + .campaign,
-      .edit-post-visual-editor .section-group.campaigns .campaign + .campaign {
-        margin-top: 1.5rem; }
+      .edit-post-visual-editor .home-section.campaigns .campaign,
+      .edit-post-visual-editor .section-group.campaigns .campaign {
+        margin-right: 1rem;
+        margin-left: 1rem; }
       .edit-post-visual-editor .home-section.campaigns .section-title,
       .edit-post-visual-editor .section-group.campaigns .section-title {
-        color: #4BB9EB;
-        letter-spacing: 1px;
-        font-size: 1.125rem;
-        text-align: center; }
-      .edit-post-visual-editor .home-section.campaigns img,
-      .edit-post-visual-editor .section-group.campaigns img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover; }
-      .edit-post-visual-editor .home-section.campaigns .entry-title,
-      .edit-post-visual-editor .section-group.campaigns .entry-title {
-        font-weight: 700; }
-      .edit-post-visual-editor .home-section.campaigns .entry-body,
-      .edit-post-visual-editor .section-group.campaigns .entry-body {
-        padding: 1.5rem;
-        background-color: #0092d9;
-        text-align: center;
-        color: #fff; }
-        .edit-post-visual-editor .home-section.campaigns .entry-body a,
-        .edit-post-visual-editor .section-group.campaigns .entry-body a {
-          color: #fff; }
-      .edit-post-visual-editor .home-section.campaigns .entry-content,
-      .edit-post-visual-editor .section-group.campaigns .entry-content {
-        font-size: 1.125rem; }
-      .edit-post-visual-editor .home-section.campaigns .section-footer,
-      .edit-post-visual-editor .section-group.campaigns .section-footer {
-        margin-top: 2rem;
-        font-size: 1.125rem; }
-        .edit-post-visual-editor .home-section.campaigns .section-footer a,
-        .edit-post-visual-editor .section-group.campaigns .section-footer a {
-          color: #fff;
-          text-decoration: underline; }
-      @media (min-width: 768px) {
-        .edit-post-visual-editor .home-section.campaigns .section-title,
-        .edit-post-visual-editor .section-group.campaigns .section-title {
-          margin-bottom: .8rem;
-          text-align: initial; } }
+        color: #4BB9EB; }
     .edit-post-visual-editor .home-section .block,
     .edit-post-visual-editor .section-group .block {
       margin-bottom: 2rem;
@@ -8320,27 +8339,7 @@ h3  24/28
       .edit-post-visual-editor .home-section .entry-subtitle,
       .edit-post-visual-editor .section-group .section-title,
       .edit-post-visual-editor .section-group .entry-subtitle {
-        font-size: 1.125rem; }
-      .edit-post-visual-editor .home-section.campaigns .campaign,
-      .edit-post-visual-editor .section-group.campaigns .campaign {
-        position: relative;
-        height: 458px; }
-      .edit-post-visual-editor .home-section.campaigns img,
-      .edit-post-visual-editor .section-group.campaigns img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover; }
-      .edit-post-visual-editor .home-section.campaigns .entry-body,
-      .edit-post-visual-editor .section-group.campaigns .entry-body {
-        position: absolute;
-        width: 31.25%;
-        height: 100%;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        padding: 2.5rem;
-        background-color: rgba(0, 146, 217, 0.7); } }
+        font-size: 1.125rem; } }
   .edit-post-visual-editor #email-icon .img-top,
   .edit-post-visual-editor #email-icon .img-bottom {
     fill: #ef4619; }
