@@ -2,14 +2,79 @@
   /* @include no-bullets; */
 }
 
-// html, body {
-//   overflow: hidden;
-//   height: 100%;
-// }
-
 %full-width {
   width: 100vw;
   position: relative;
   left: 50%;
   margin-left: -50vw;
 }
+
+/* Campaign */
+%campaign-module {
+  margin-bottom: 1.5rem;
+  background-size: 100%;
+  background-position: center top;
+  display: flex;
+  background-repeat: no-repeat;
+
+  .entry-title {
+    margin-bottom: 1rem;
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .entry-body {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 148px;
+    background-color: rgba( $primary, 1 );
+    text-align: center;
+    color: $white;
+
+    .entry-content {
+      font-family: $font-family-serif;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  .entry-content {
+    font-size: $font-size-lg;
+  }
+
+  .section-footer {
+    margin-top: 2rem;
+    font-size: $font-size-lg;
+    
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: cover;
+    min-height: 458px;
+    @include make-row;
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
+
+    .section-title {
+      margin-bottom: .8rem;
+      text-align: initial;
+    }
+
+    .entry-body {
+      @include make-col( 5 );
+      @include make-col-offset( 11 );
+      margin-top: 0;
+      padding: 2.5rem;
+    }
+  }
+}
+

@@ -10,11 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<?php if( !is_tax( array( 'category', 'campaign-category' ) ) ) : ?>	
-		<?php echo get_the_post_thumbnail( $post->ID, 'banner' ); ?>
-	<?php endif; ?>
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>"<?php echo ( has_post_thumbnail() ) ? ' style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id() ) . ');"' : ''; ?>>
 
 
 	<div class="entry-body">
