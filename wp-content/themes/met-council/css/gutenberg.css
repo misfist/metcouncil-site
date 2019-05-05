@@ -7635,6 +7635,8 @@ h3  24/28
       background-color: #0092d9;
       text-align: center;
       color: #fff; }
+      .edit-post-visual-editor .home-section.campaigns .campaign .entry-body .entry-content, .edit-post-visual-editor .section-group.campaigns .campaign .entry-body .entry-content {
+        font-family: "Merriweather", serif; }
       .edit-post-visual-editor .home-section.campaigns .campaign .entry-body a, .edit-post-visual-editor .section-group.campaigns .campaign .entry-body a {
         color: #fff; }
     .edit-post-visual-editor .home-section.campaigns .campaign .entry-content, .edit-post-visual-editor .section-group.campaigns .campaign .entry-content {
@@ -7657,7 +7659,9 @@ h3  24/28
             flex-wrap: wrap;
         margin-right: -1rem;
         margin-left: -1rem;
-        margin-bottom: 2.5rem; }
+        margin-bottom: 2.5rem;
+        margin-left: 0;
+        margin-right: 0; }
         .edit-post-visual-editor .home-section.campaigns .campaign .section-title, .edit-post-visual-editor .section-group.campaigns .campaign .section-title {
           margin-bottom: .8rem;
           text-align: initial; }
@@ -8067,10 +8071,6 @@ h3  24/28
     .edit-post-visual-editor .home-section.campaigns,
     .edit-post-visual-editor .section-group.campaigns {
       background-color: #212121; }
-      .edit-post-visual-editor .home-section.campaigns .campaign,
-      .edit-post-visual-editor .section-group.campaigns .campaign {
-        margin-right: 1rem;
-        margin-left: 1rem; }
       .edit-post-visual-editor .home-section.campaigns .section-title,
       .edit-post-visual-editor .section-group.campaigns .section-title {
         color: #4BB9EB; }

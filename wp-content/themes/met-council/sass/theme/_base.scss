@@ -33,6 +33,10 @@
     text-align: center;
     color: $white;
 
+    .entry-content {
+      font-family: $font-family-serif;
+    }
+
     a {
       color: $white;
     }
@@ -57,6 +61,8 @@
     min-height: 458px;
     @include make-row;
     margin-bottom: 2.5rem;
+    margin-left: 0;
+    margin-right: 0;
 
     .section-title {
       margin-bottom: .8rem;

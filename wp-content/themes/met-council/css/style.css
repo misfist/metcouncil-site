@@ -9745,6 +9745,8 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: #0092d9;
     text-align: center;
     color: #fff; }
+    .post-type-archive-campaign .campaign .entry-body .entry-content, .tax-campaign-status .campaign .entry-body .entry-content, .home-section.campaigns .campaign .entry-body .entry-content, .section-group.campaigns .campaign .entry-body .entry-content {
+      font-family: "Merriweather", serif; }
     .post-type-archive-campaign .campaign .entry-body a, .tax-campaign-status .campaign .entry-body a, .home-section.campaigns .campaign .entry-body a, .section-group.campaigns .campaign .entry-body a {
       color: #fff; }
   .post-type-archive-campaign .campaign .entry-content, .tax-campaign-status .campaign .entry-content, .home-section.campaigns .campaign .entry-content, .section-group.campaigns .campaign .entry-content {
@@ -9768,7 +9770,9 @@ a.text-dark:hover, a.text-dark:focus {
           flex-wrap: wrap;
       margin-right: -1rem;
       margin-left: -1rem;
-      margin-bottom: 2.5rem; }
+      margin-bottom: 2.5rem;
+      margin-left: 0;
+      margin-right: 0; }
       .post-type-archive-campaign .campaign .section-title, .tax-campaign-status .campaign .section-title, .home-section.campaigns .campaign .section-title, .section-group.campaigns .campaign .section-title {
         margin-bottom: .8rem;
         text-align: initial; }
@@ -11021,10 +11025,6 @@ figcaption {
   .home-section.campaigns,
   .section-group.campaigns {
     background-color: #212121; }
-    .home-section.campaigns .campaign,
-    .section-group.campaigns .campaign {
-      margin-right: 1rem;
-      margin-left: 1rem; }
     .home-section.campaigns .section-title,
     .section-group.campaigns .section-title {
       color: #4BB9EB; }
