@@ -7858,6 +7858,8 @@ h3  24/28
     color: #00548D;
     font-size: 1.875rem;
     font-weight: bold; }
+  .edit-post-visual-editor .page-template-page-static p {
+    margin-bottom: 1.5rem; }
   .edit-post-visual-editor .page-template-page-static .wp-block-gallery,
   .edit-post-visual-editor .page-template-page-static .wp-block-image {
     margin-top: 1rem;
@@ -7865,6 +7867,11 @@ h3  24/28
   .edit-post-visual-editor .page-template-page-static .alignwide img {
     width: 100%;
     height: auto; }
+  .edit-post-visual-editor .page-template-page-static .entry-content h2 {
+    margin-top: 4rem;
+    margin-bottom: .75rem; }
+  .edit-post-visual-editor .page-template-page-static .entry-content li {
+    bottom-margin: .75rem; }
   @media (min-width: 768px) {
     .edit-post-visual-editor .page-template-page-static .site-main {
       width: calc( 100% * ( 12/16 ));
@@ -7896,6 +7903,9 @@ h3  24/28
                object-fit: cover; }
     .edit-post-visual-editor .page-template-page-static p + h2 {
       margin-top: 2rem; } }
+  @media (min-width: 1360px) {
+    .edit-post-visual-editor .page-template-page-static p {
+      line-height: 1.75; } }
   .edit-post-visual-editor .home #content {
     padding-top: 0; }
   .edit-post-visual-editor .jumbotron-fluid,

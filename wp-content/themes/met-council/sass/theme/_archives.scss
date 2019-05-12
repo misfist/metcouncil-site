@@ -123,8 +123,6 @@
   }
 }
 
-.tax-kbe_taxonomy {}
-
 /* Programs */
 .post-type-archive-program {
 
@@ -328,47 +326,6 @@
     @extend %campaign-module;
   }
 
-  // .campaign {
-  //   background-color: $blue-darker;
-
-  //   img {
-  //     width: 100%;
-  //     height: 100%;
-  //     object-fit: cover;
-  //   }
-
-  //   .entry-title {
-  //     font-weight: $font-weight-bold;
-  //   }
-
-  //   .entry-body {
-  //     padding: 1.5rem;
-  //     background-color: rgba( $primary, 1 );
-  //     text-align: center;
-  //     color: $white;
-
-  //     a {
-  //       color: $white;
-  //     }
-  //   }
-
-  //   .entry-content {
-  //     font-size: $font-size-lg;
-  //   }
-
-  //   .btn {
-  //     max-width: 100%;
-  //   }
-
-  //   &:last-child {
-      
-  //   }
-  // }
-
-  // .campaign + .campaign {
-  //   margin-top: 1.5rem;
-  // }
-
   .section-footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -380,38 +337,20 @@
     }
   }
 
-  // @include media-breakpoint-up(lg) {
-
-  //   .campaign {
-  //     position: relative;
-  //     height: 458px;
-
-  //     img {
-  //       width: 100%;
-  //       height: 100%;
-  //       object-fit: cover;
-  //     }
-  //     .entry-body {
-  //       position: absolute;
-  //       width: 31.25%;
-  //       height: 100%;
-  //       top: 0;
-  //       bottom: 0;
-  //       right: 0;
-  //       padding: 2.5rem 2.5rem 5rem 2.5rem;
-  //       background-color: rgba( $primary, .7 );
-
-  //     }
-  //   }
-
-  // }
-
 }
 
 .post-type-archive-staff,
-.tax-staff-category {
+.tax-staff-category,
+.page-template-page-staff {
+
   .page-header {
     margin-bottom: 2rem;
+  }
+
+  .staff-section + .staff-section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid $border-color;
   }
 
   .staff + .staff {
@@ -420,7 +359,65 @@
     border-top: 1px solid $border-color;
   }
 
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .entry-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .person-title,
+  .person-email {
+    margin-bottom: 0;
+  }
+
+  .person-title {
+    font-weight: bold;
+  }
+
+  .person-email {}
+
+  .person-phone {}
+
   @include media-breakpoint-up(md) {
+
+    .staff {
+      &.has-post-thumbnail {
+        @include make-row;
+      }
+    }
+
+    .person-bio {
+      max-width: 90%;
+    }
+
+    .has-post-thumbnail {
+      .entry-header,
+      .entry-footer,
+      .entry-image,
+      .entry-content {
+        @include make-col-ready;
+      }
+  
+      .entry-header,
+      .entry-footer {
+        @include make-col($grid-columns);
+      }
+  
+      .entry-image {
+        @include make-col($grid-columns * .3125);
+      }
+  
+      .entry-content {
+        @include make-col($grid-columns * .6875);
+        padding-left: 2rem;
+      }
+    }
+
     .staff + .staff {
       margin-top: 2rem;
       padding-top: 2rem;

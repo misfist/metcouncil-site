@@ -16,10 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php the_title( '<h2 class="entry-title">','</h2>' ); ?>
 
-
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<figure class="entry-image">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	</figure>
 
 	<div class="entry-content">
 
@@ -29,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'metcouncil' ),
 			'after'  => '</div>',
 		) );
 		?>
