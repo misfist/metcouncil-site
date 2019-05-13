@@ -7871,7 +7871,7 @@ h3  24/28
     margin-top: 4rem;
     margin-bottom: .75rem; }
   .edit-post-visual-editor .page-template-page-static .entry-content li {
-    bottom-margin: .75rem; }
+    margin-bottom: .75rem; }
   @media (min-width: 768px) {
     .edit-post-visual-editor .page-template-page-static .site-main {
       width: calc( 100% * ( 12/16 ));
@@ -8100,10 +8100,10 @@ h3  24/28
       font-size: 2.5rem; }
     .edit-post-visual-editor .home-section .block h3,
     .edit-post-visual-editor .section-group .block h3 {
-      margin-bottom: 1.25rem; }
+      margin-bottom: .75rem; }
     .edit-post-visual-editor .home-section .block .block-title,
     .edit-post-visual-editor .section-group .block .block-title {
-      margin-bottom: .25rem; }
+      margin-bottom: 1rem; }
     .edit-post-visual-editor .home-section .block .section-image,
     .edit-post-visual-editor .section-group .block .section-image {
       margin-bottom: 1.25rem; }
@@ -8185,6 +8185,10 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.newsletter input:not([type="submit"]),
     .edit-post-visual-editor .section-group .block.newsletter ::placeholder {
       color: #ef4619; }
+    .edit-post-visual-editor .home-section .block.subscribe .block-entry h3, .edit-post-visual-editor .home-section .block.newsletter .block-entry h3,
+    .edit-post-visual-editor .section-group .block.subscribe .block-entry h3,
+    .edit-post-visual-editor .section-group .block.newsletter .block-entry h3 {
+      color: #ef4619; }
     .edit-post-visual-editor .home-section .block.subscribe .btn, .edit-post-visual-editor .home-section .block.subscribe input[type="submit"],
     .edit-post-visual-editor .home-section .block.subscribe input[type="button"], .edit-post-visual-editor .home-section .block.subscribe .wp-block-button .wp-block-button__link, .edit-post-visual-editor .wp-block-button .home-section .block.subscribe .wp-block-button__link, .edit-post-visual-editor .home-section .block.newsletter .btn, .edit-post-visual-editor .home-section .block.newsletter input[type="submit"],
     .edit-post-visual-editor .home-section .block.newsletter input[type="button"], .edit-post-visual-editor .home-section .block.newsletter .wp-block-button .wp-block-button__link, .edit-post-visual-editor .wp-block-button .home-section .block.newsletter .wp-block-button__link,
@@ -8252,6 +8256,15 @@ h3  24/28
       .edit-post-visual-editor .section-group .block.twitter .wp-block-button .wp-block-button__link,
       .edit-post-visual-editor .wp-block-button .section-group .block.twitter .wp-block-button__link {
         background-color: #0092D9; }
+      .edit-post-visual-editor .home-section .block.twitter .block-inner,
+      .edit-post-visual-editor .section-group .block.twitter .block-inner {
+        padding-bottom: .75rem; }
+      .edit-post-visual-editor .home-section .block.twitter .block-entry,
+      .edit-post-visual-editor .section-group .block.twitter .block-entry {
+        overflow: hidden; }
+        .edit-post-visual-editor .home-section .block.twitter .block-entry p,
+        .edit-post-visual-editor .section-group .block.twitter .block-entry p {
+          margin-top: -40px; }
       .edit-post-visual-editor .home-section .block.twitter iframe,
       .edit-post-visual-editor .section-group .block.twitter iframe {
         margin-bottom: -2rem !important; }
@@ -8301,6 +8314,7 @@ h3  24/28
     .edit-post-visual-editor .section-group .block.event input[type="button"],
     .edit-post-visual-editor .section-group .block.event .wp-block-button .wp-block-button__link,
     .edit-post-visual-editor .wp-block-button .section-group .block.event .wp-block-button__link {
+      margin-top: 1rem;
       background-color: #6D3695; }
     .edit-post-visual-editor .home-section .block .event-date,
     .edit-post-visual-editor .home-section .block .event-time,
@@ -8349,7 +8363,12 @@ h3  24/28
       .edit-post-visual-editor .home-section .entry-subtitle,
       .edit-post-visual-editor .section-group .section-title,
       .edit-post-visual-editor .section-group .entry-subtitle {
-        font-size: 1.125rem; } }
+        font-size: 1.125rem; }
+      .edit-post-visual-editor .home-section .block.newsletter .block-entry h3, .edit-post-visual-editor .home-section .block.subscribe .block-entry h3,
+      .edit-post-visual-editor .section-group .block.newsletter .block-entry h3,
+      .edit-post-visual-editor .section-group .block.subscribe .block-entry h3 {
+        font-size: 2.5rem;
+        line-height: 1.2; } }
   .edit-post-visual-editor #email-icon .img-top,
   .edit-post-visual-editor #email-icon .img-bottom {
     fill: #ef4619; }
