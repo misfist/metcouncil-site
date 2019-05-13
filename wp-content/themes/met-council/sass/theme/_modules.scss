@@ -203,11 +203,11 @@
     }
 
     h3 {
-      margin-bottom: 1.25rem;
+      margin-bottom: .75rem;
     }
 
     .block-title {
-      margin-bottom: .25rem;
+      margin-bottom: 1rem;
     }
 
     .section-image {
@@ -227,6 +227,7 @@
 
     &.subscribe,
     &.newsletter {
+      
       .single {
         @extend .col-16;
       }
@@ -236,6 +237,12 @@
       input:not([type="submit"]),
       ::placeholder {
         color: $danger;
+      }
+
+      .block-entry {
+        h3 {
+          color: $danger;
+        }
       }
 
       .btn {
@@ -273,6 +280,18 @@
         background-color: $primary;
       }
 
+      .block-inner {
+        padding-bottom: .75rem;
+      }
+
+      .block-entry {
+        overflow: hidden;
+
+        p {
+          margin-top: -40px;
+        }
+      }
+
       iframe {
         margin-bottom: -2rem !important;
       }
@@ -297,6 +316,7 @@
       }
 
       .btn {
+        margin-top: 1rem;
         background-color: $purple-darker;
       }
     }
@@ -361,30 +381,17 @@
       font-size: 1.125rem;
     }
 
-    // &.campaigns {
-    //   .campaign {
-    //     position: relative;
-    //     height: 458px;
-    //   }
-
-    //   img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //   }
-    //   .entry-body {
-    //     position: absolute;
-    //     width: 31.25%;
-    //     height: 100%;
-    //     top: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     padding: 2.5rem;
-    //     background-color: rgba( $primary, .7 );
-
-    //   }
-    // }
-    
+    .block {
+      &.newsletter,
+      &.subscribe {
+        .block-entry {
+          h3 {
+            font-size: $font-size-lg-2;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
   }
 
   @include media-breakpoint-up(lg) {}

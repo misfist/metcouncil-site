@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Static Page - Narrow
+ * Template Name: Static Page
  *
  * Template for displaying static pages, with narrow content area.
  *
