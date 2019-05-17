@@ -58,7 +58,8 @@ if ( ! function_exists( 'core_language_taxonomy' ) ) {
 
  }
 
-if ( ! function_exists( 'core_campaign_taxonomy' ) ) {
+
+ if ( ! function_exists( 'core_campaign_taxonomy' ) ) {
 
    /**
     * Register Custom Taxonomy
@@ -156,66 +157,15 @@ if ( ! function_exists( 'core_campaign_status_taxonomy' ) ) {
 
 }
 
-// if ( ! function_exists( 'core_page_taxonomy' ) ) {
-
-//   /**
-//    * Register Page Type Taxonomy
-//    * Used for internal organization
-//    *
-//    * @return void
-//    */
-//   function core_page_taxonomy() {
-
-//   	$labels = array(
-//   		'name'                       => _x( 'Page Types', 'Taxonomy General Name', 'core-functionality' ),
-//   		'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'core-functionality' ),
-//   		'menu_name'                  => __( 'Page Types', 'core-functionality' ),
-//   		'all_items'                  => __( 'All Pages', 'core-functionality' ),
-//   		'parent_item'                => __( 'Parent Page', 'core-functionality' ),
-//   		'parent_item_colon'          => __( 'Parent Page:', 'core-functionality' ),
-//   		'new_item_name'              => __( 'New Page Name', 'core-functionality' ),
-//   		'add_new_item'               => __( 'Add New Page', 'core-functionality' ),
-//   		'edit_item'                  => __( 'Edit Page', 'core-functionality' ),
-//   		'update_item'                => __( 'Update Page', 'core-functionality' ),
-//   		'view_item'                  => __( 'View Page', 'core-functionality' ),
-//   		'separate_items_with_commas' => __( 'Separate items with commas', 'core-functionality' ),
-//   		'add_or_remove_items'        => __( 'Add or remove items', 'core-functionality' ),
-//   		'choose_from_most_used'      => __( 'Choose from the most used', 'core-functionality' ),
-//   		'popular_items'              => __( 'Popular Pages', 'core-functionality' ),
-//   		'search_items'               => __( 'Search Pages', 'core-functionality' ),
-//   		'not_found'                  => __( 'Not Found', 'core-functionality' ),
-//   		'no_terms'                   => __( 'No items', 'core-functionality' ),
-//   		'items_list'                 => __( 'Pages list', 'core-functionality' ),
-//   		'items_list_navigation'      => __( 'Pages list navigation', 'core-functionality' ),
-//   	);
-//   	$args = array(
-//   		'labels'                     => $labels,
-//   		'hierarchical'               => false,
-//   		'public'                     => true,
-//   		'show_ui'                    => true,
-//       'show_in_quick_edit'         => true,
-//       'meta_box_cb'                => false,
-//   		'show_admin_column'          => true,
-//   		'show_in_nav_menus'          => true,
-//   		'show_tagcloud'              => true,
-//   		'show_in_rest'               => true,
-//   	);
-//   	register_taxonomy( 'page-type', array( 'page' ), $args );
-
-//   }
-//   add_action( 'init', 'core_page_taxonomy', 0 );
-
-// }
-
 if ( ! function_exists( 'core_staff_taxonomy' ) ) {
 
  // Register Custom Taxonomy
  function core_staff_taxonomy() {
 
  	$labels = array(
- 		'name'                       => _x( 'Staff Categories', 'Taxonomy General Name', 'core-functionality' ),
+ 		'name'                       => _x( 'People Categories', 'Taxonomy General Name', 'core-functionality' ),
  		'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'core-functionality' ),
- 		'menu_name'                  => __( 'Staff Categories', 'core-functionality' ),
+ 		'menu_name'                  => __( 'Categories', 'core-functionality' ),
  		'all_items'                  => __( 'All Categories', 'core-functionality' ),
  		'parent_item'                => __( 'Parent Category', 'core-functionality' ),
  		'parent_item_colon'          => __( 'Parent Category:', 'core-functionality' ),

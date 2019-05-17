@@ -87,38 +87,57 @@ if ( ! function_exists( 'core_staff_post_type' ) ) {
    */
   function core_staff_post_type() {
 
+    $template = array(
+      array( 'core/paragraph', array(
+          'placeholder' => __( 'Add Title...', 'core-functionality' ),
+          'className'   => 'person-title'
+      ) ),
+      array( 'core/paragraph', array(
+        'placeholder' => __( 'Add Email...', 'core-functionality' ),
+        'className'   => 'person-email'
+      ) ),
+      array( 'core/paragraph', array(
+        'placeholder' => __( 'Add Phone...', 'core-functionality' ),
+        'className'   => 'person-phone'
+      ) ),
+      array( 'core/paragraph', array(
+          'placeholder' => __( 'Add Bio...', 'core-functionality' ),
+          'className'   => 'person-bio'
+      ) ),
+    );
+
     $labels = array(
-      'name'                  => _x( 'Staff', 'Post Type General Name', 'core-functionality' ),
-      'singular_name'         => _x( 'Staff Member', 'Post Type Singular Name', 'core-functionality' ),
-      'menu_name'             => __( 'Staff', 'core-functionality' ),
-      'name_admin_bar'        => __( 'Staff Member', 'core-functionality' ),
-      'archives'              => __( 'Staff Member Archives', 'core-functionality' ),
-      'attributes'            => __( 'Staff Member Attributes', 'core-functionality' ),
-      'parent_item_colon'     => __( 'Parent Staff Member:', 'core-functionality' ),
-      'all_items'             => __( 'All Staff', 'core-functionality' ),
-      'add_new_item'          => __( 'Add New Staff Member', 'core-functionality' ),
+      'name'                  => _x( 'People', 'Post Type General Name', 'core-functionality' ),
+      'singular_name'         => _x( 'Person', 'Post Type Singular Name', 'core-functionality' ),
+      'menu_name'             => __( 'People', 'core-functionality' ),
+      'name_admin_bar'        => __( 'Person', 'core-functionality' ),
+      'archives'              => __( 'Person Archives', 'core-functionality' ),
+      'attributes'            => __( 'Person Attributes', 'core-functionality' ),
+      'parent_item_colon'     => __( 'Parent Person:', 'core-functionality' ),
+      'all_items'             => __( 'All People', 'core-functionality' ),
+      'add_new_item'          => __( 'Add New Person', 'core-functionality' ),
       'add_new'               => __( 'Add New', 'core-functionality' ),
-      'new_item'              => __( 'New Staff Member', 'core-functionality' ),
-      'edit_item'             => __( 'Edit Staff Member', 'core-functionality' ),
-      'update_item'           => __( 'Update Staff Member', 'core-functionality' ),
-      'view_item'             => __( 'View Staff Member', 'core-functionality' ),
-      'view_items'            => __( 'View Staff Member', 'core-functionality' ),
-      'search_items'          => __( 'Search Staff Members', 'core-functionality' ),
+      'new_item'              => __( 'New Person', 'core-functionality' ),
+      'edit_item'             => __( 'Edit Person', 'core-functionality' ),
+      'update_item'           => __( 'Update Person', 'core-functionality' ),
+      'view_item'             => __( 'View Person', 'core-functionality' ),
+      'view_items'            => __( 'View Person', 'core-functionality' ),
+      'search_items'          => __( 'Search Persons', 'core-functionality' ),
       'not_found'             => __( 'Not found', 'core-functionality' ),
       'not_found_in_trash'    => __( 'Not found in Trash', 'core-functionality' ),
-      'featured_image'        => __( 'Staff Member Photo', 'core-functionality' ),
-      'set_featured_image'    => __( 'Set staff photo', 'core-functionality' ),
-      'remove_featured_image' => __( 'Remove staff photo', 'core-functionality' ),
-      'use_featured_image'    => __( 'Use as staff photo', 'core-functionality' ),
+      'featured_image'        => __( 'Person Photo', 'core-functionality' ),
+      'set_featured_image'    => __( 'Set person\'s photo', 'core-functionality' ),
+      'remove_featured_image' => __( 'Remove person\'s photo', 'core-functionality' ),
+      'use_featured_image'    => __( 'Use as person\'s photo', 'core-functionality' ),
       'insert_into_item'      => __( 'Insert into item', 'core-functionality' ),
       'uploaded_to_this_item' => __( 'Uploaded to this item', 'core-functionality' ),
-      'items_list'            => __( 'Staff Member list', 'core-functionality' ),
-      'items_list_navigation' => __( 'Staff Member list navigation', 'core-functionality' ),
+      'items_list'            => __( 'Person list', 'core-functionality' ),
+      'items_list_navigation' => __( 'Person list navigation', 'core-functionality' ),
       'filter_items_list'     => __( 'Filter items list', 'core-functionality' ),
       );
 
     $args = array(
-      'label'                 => __( 'Staff Member', 'core-functionality' ),
+      'label'                 => __( 'Person', 'core-functionality' ),
       'labels'                => $labels,
       'supports'              => array( 'title', 'editor', 'thumbnail' ),
       'taxonomies'            => array( 'staff-category' ),
@@ -136,6 +155,7 @@ if ( ! function_exists( 'core_staff_post_type' ) ) {
       'capability_type'       => 'page',
       'menu_icon'             => 'dashicons-groups',
       'show_in_rest'          => true,
+      'template'              => $template,
     );
     register_post_type( 'staff', $args );
 
@@ -198,17 +218,6 @@ if ( ! function_exists( 'core_program_post_type' ) ) {
   		'publicly_queryable'    => true,
   		'capability_type'       => 'page',
       'show_in_rest'          => true,
-      'template' => array(
-        array( 'corefunctionality/translation-title', array(
-          'placeholder' => 'Add Translation Title...',
-        ) ),
-        array( 'corefunctionality/summary', array(
-          'placeholder' => 'Add Summary...',
-        ) ),
-        array( 'corefunctionality/intro', array(
-          'placeholder' => 'Add Intro...',
-        ) ),
-      ),
   	);
   	register_post_type( 'program', $args );
 
