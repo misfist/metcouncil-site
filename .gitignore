@@ -1,53 +1,78 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+# Bare Minimum Git
+# http://ironco.de/bare-minimum-git/
+# ver 20150227
+#
+# This file is tailored for a WordPress project 
+# using the default directory structure
+#
+# This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# Change Log:
+# 20150227 Ignore hello.php plugin. props @damienfa
+# 20150227 Change theme ignore to wildcard twenty*. props @Z33
+# 20140606 Add .editorconfig as a tracked file
+# 20140404 Ignore database, compiled, and packaged files
+# 20140404 Header Information Updated
+# 20140402 Initially Published
+#
+# -----------------------------------------------------------------
 
-# This is a template .gitignore file for git-managed WordPress projects.
-#
-# Fact: you don't want WordPress core files, or your server-specific
-# configuration files etc., in your project's repository. You just don't.
-#
-# Solution: stick this file up your repository root (which it assumes is
-# also the WordPress root directory) and add exceptions for any plugins,
-# themes, and other directories that should be under version control.
-#
-# See the comments below for more info on how to add exceptions for your
-# content. Or see git's documentation for more info on .gitignore files:
-# http://kernel.org/pub/software/scm/git/docs/gitignore.html
- 
-# Ignore everything in the root except the "wp-content" directory.
+# ignore everything in the root except the "wp-content" directory.
 /*
-!.gitignore
 !wp-content/
- 
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
- 
-# Ignore everything in the "plugins" directory, except the plugins you
-# specify (see the commented-out examples for hints on how to do this.)
-wp-content/plugins/*
-!wp-content/plugins/core-functionality/
-!wp-content/plugins/advanced-custom-fields-pro/
-!wp-content/plugins/admin-columns-pro/
-!wp-content/plugins/wp-authors/
-!wp-content/plugins/wp-migrate*
- 
-# Ignore everything in the "themes" directory, except the themes you
-# specify (see the commented-out example for a hint on how to do this.)
-wp-content/themes/*
-!wp-content/themes/understrap/
-!wp-content/themes/met-council/
 
-############################################
-# Ignore some other system generated files #
-############################################
-node_modules
+# ignore all files starting with .
+.*
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.DS_Store
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
 *.com
 *.class
 *.dll
 *.exe
 *.o
 *.so
+
+# ignore packaged files
 *.7z
 *.dmg
 *.gz
@@ -55,26 +80,14 @@ node_modules
 *.jar
 *.rar
 *.tar
-*.log
-*.sql
-*.sqlite
-.DS_Store
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-.codekit-cache
-.sass-cache
-# Sublime
-*.sublime-project
-*.sublime-workspace
-# PhpStorm
-.idea/
+*.zip
 
-# Always include the build script #
-###################################
-!build.sh
-!README.md
-!CHANGELOG.md
-!.gitignore
+# ignore everything in the "wp-content" directory, except:
+wp-content/*
+!wp-content/plugins/core-functionality/
+!wp-content/themes/understrap/
+!wp-content/themes/met-council/
+
+
+# ignore node/grunt dependency directories
+node_modules/

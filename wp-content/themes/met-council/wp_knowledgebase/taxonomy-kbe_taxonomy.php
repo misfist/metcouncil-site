@@ -69,7 +69,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<article id="term-<?php echo $term->term_id; ?>" class="help-answers block col-md">
 
-                  <div class="block-inner">
+									<div class="block-inner">
 
   									<header class="entry-header">
   										<h2 class="entry-title"><?php echo apply_filters( 'the_title', $term->name ); ?></h2>
@@ -77,40 +77,40 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
   									<div class="entry-content"><?php echo apply_filters( 'the_content', $term->description ); ?></div>
 
-  									<ul class="help-answers-list">
+										<ul class="help-answers-list">
 
-  										<?php
-  										$args = array(
-  											'post_type' => KBE_POST_TYPE,
-  											'tax_query'	=> array(
-  												array(
-  													'taxonomy'         => KBE_POST_TAXONOMY,
-  													'terms'            => $term->term_id,
-  													'field'            => 'term_id',
-  												)
-  											),
-  										);
+											<?php
+											$args = array(
+												'post_type' => KBE_POST_TYPE,
+												'tax_query'	=> array(
+													array(
+														'taxonomy'         => KBE_POST_TAXONOMY,
+														'terms'            => $term->term_id,
+														'field'            => 'term_id',
+													)
+												),
+											);
 
-  										$query = new WP_Query( $args );
-  										?>
+											$query = new WP_Query( $args );
+											?>
 
-  										<?php if( $query->have_posts() ) : ?>
+											<?php if( $query->have_posts() ) : ?>
 
-  											<?php while( $query->have_posts() ) : $query->the_post(); ?>
+												<?php while( $query->have_posts() ) : $query->the_post(); ?>
 
-  												<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-  													<a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark"><?php the_title(); ?></a>
-  												</li>
+													<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+														<a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark"><?php the_title(); ?></a>
+													</li>
 
-  											<?php endwhile; ?>
+												<?php endwhile; ?>
 
-  											<?php wp_reset_postdata(); ?>
+												<?php wp_reset_postdata(); ?>
 
-  										<?php endif; ?>
+											<?php endif; ?>
 
-  									</ul>
+										</ul>
 
-                  </div>
+									</div>
 
 								</article>
 
@@ -144,15 +144,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<article <?php post_class( 'col-md block' ); ?> id="post-<?php the_ID(); ?>">
 
-                  <div class="block-inner">
+									<div class="block-inner">
 
-  									<header class="entry-header">
-  										<h2 class="entry-title"><a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-  									</header>
+										<header class="entry-header">
+											<h2 class="entry-title"><a href="<?php echo get_permalink(); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+										</header>
 
-  									<div class="entry-content"><?php the_excerpt(); ?></div>
+										<div class="entry-content"><?php the_excerpt(); ?></div>
 
-                  </div>
+									</div>
 
 								</article>
 
@@ -173,9 +173,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php endif; ?>
 
 			</main>
-
-			<!-- The pagination component -->
-			<?php// understrap_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

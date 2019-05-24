@@ -61,20 +61,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 							<article id="term-<?php echo $term->term_id; ?>" class="help-answers block">
 
-                <div class="block-inner">
+								<div class="block-inner">
 
-  								<header class="entry-header">
-  									<div class="help-answers-image">
-  										<?php if( $image_id = get_term_meta( $term->term_id, 'image', true ) ) : ?>
-  											<?php echo wp_get_attachment_image( $image_id, 'thumbnail', true, array( 'class' => 'help-answers-icon' ) ); ?>
-  										<?php endif; ?>
-  									</div>
-  									<h2 class="entry-title"><a href="<?php echo get_term_link( $term ); ?>" title="<?php echo esc_attr( $term->name ); ?>" rel="bookmark"><?php echo apply_filters( 'the_title', $term->name ); ?></a></h2>
-  								</header>
+									<header class="entry-header">
+										<div class="help-answers-image">
+											<?php if( $image_id = get_term_meta( $term->term_id, 'image', true ) ) : ?>
+												<?php echo wp_get_attachment_image( $image_id, 'thumbnail', true, array( 'class' => 'help-answers-icon' ) ); ?>
+											<?php endif; ?>
+										</div>
+										<h2 class="entry-title"><a href="<?php echo get_term_link( $term ); ?>" title="<?php echo esc_attr( $term->name ); ?>" rel="bookmark"><?php echo apply_filters( 'the_title', $term->name ); ?></a></h2>
+									</header>
 
-  								<div class="entry-content"><?php echo apply_filters( 'the_content', $term->description ); ?></div>
+									<div class="entry-content"><?php echo apply_filters( 'the_content', $term->description ); ?></div>
 
-                </div>
+								</div>
 
 							</article>
 
@@ -91,9 +91,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php endif; ?>
 
 			</main>
-
-			<!-- The pagination component -->
-			<?php// understrap_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

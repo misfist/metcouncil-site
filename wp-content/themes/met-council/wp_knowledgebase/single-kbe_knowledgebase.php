@@ -21,7 +21,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<nav class="breadcrumbs" aria-label="breadcrumb" role="navigation">
 				<ol class="breadcrumb" role="navigation">
-					<?php if( 'bcn_display_list' ) : ?>
+					<?php if( function_exists( 'bcn_display_list' ) ) : ?>
 						<?php bcn_display_list() ; ?>
 					<?php endif; ?>
 				</ol>
@@ -32,8 +32,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'loop-templates/content-single', get_post_type() ); ?>
-
-					<?php// understrap_post_nav(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
