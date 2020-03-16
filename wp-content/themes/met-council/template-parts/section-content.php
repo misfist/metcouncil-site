@@ -19,20 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+		
+		<?php if( $content = the_sub_field( 'content' ) ) : ?>
+			<?php echo apply_filters( 'the_content', $content ); ?>
+		<?php endif; ?>
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+	<footer class="entry-footer"></footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
