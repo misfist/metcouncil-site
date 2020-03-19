@@ -28,10 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-					<div class="header-intro">
-						<?php the_excerpt(); ?>
-					</div>
-
 				</header><!-- .entry-header -->
 
 				<?php if( function_exists( 'have_rows' ) && have_rows( 'links' ) ) : ?>
