@@ -42,7 +42,7 @@ get_header();
 			),
 			'meta_query'             => array(
 				array(
-					'key'     => 'featured',
+					'key'     => 'is-featured',
 					'value'   => '1',
 				),
 			),
