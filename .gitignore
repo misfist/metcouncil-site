@@ -85,7 +85,7 @@ Thumbs.db
 # ignore everything in the "wp-content" directory, except:
 wp-content/*
 !wp-content/plugins/core-functionality/
-!wp-content/themes/understrap/
+# !wp-content/themes/understrap/
 !wp-content/themes/met-council/
 
 
