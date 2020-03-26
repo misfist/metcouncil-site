@@ -28,7 +28,8 @@ require_once( 'includes/helpers.php' );
 require_once( 'includes/custom-post-types.php' );
 require_once( 'includes/custom-taxonomy.php' );
 require_once( 'includes/custom-fields.php' );
-require_once( 'includes/gutenberg.php' );
+require_once( 'includes/block-editor.php' );
+require_once( 'includes/class-widget-reusable-block.php' );
 // require_once( 'includes/class-widget-cta.php' );
 // require_once( 'includes/class-widget-recent-posts.php' );
 
