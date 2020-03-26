@@ -1,53 +1,36 @@
-# -----------------------------------------------------------------
-# .gitignore for WordPress
-# Bare Minimum Git
-# http://ironco.de/bare-minimum-git/
-# ver 20150227
+# This is a template .gitignore file for git-managed WordPress projects.
 #
-# This file is tailored for a WordPress project 
-# using the default directory structure
+# Fact: you don't want WordPress core files, or your server-specific
+# configuration files etc., in your project's repository. You just don't.
 #
-# This file specifies intentionally untracked files to ignore
-# http://git-scm.com/docs/gitignore
+# Solution: stick this file up your repository root (which it assumes is
+# also the WordPress root directory) and add exceptions for any plugins,
+# themes, and other directories that should be under version control.
 #
-# NOTES:
-# The purpose of gitignore files is to ensure that certain files not
-# tracked by Git remain untracked.
-#
-# To ignore uncommitted changes in a file that is already tracked,
-# use `git update-index --assume-unchanged`.
-#
-# To stop tracking a file that is currently tracked,
-# use `git rm --cached`
-#
-# Change Log:
-# 20150227 Ignore hello.php plugin. props @damienfa
-# 20150227 Change theme ignore to wildcard twenty*. props @Z33
-# 20140606 Add .editorconfig as a tracked file
-# 20140404 Ignore database, compiled, and packaged files
-# 20140404 Header Information Updated
-# 20140402 Initially Published
-#
-# -----------------------------------------------------------------
+# See the comments below for more info on how to add exceptions for your
+# content. Or see git's documentation for more info on .gitignore files:
+# http://kernel.org/pub/software/scm/git/docs/gitignore.html
 
-# ignore everything in the root except the "wp-content" directory.
+# Ignore everything in the root except the "wp-content" directory.
 /*
+!.gitignore
 !wp-content/
 
-# ignore all files starting with .
-.*
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
 
-# track this file .gitignore (i.e. do NOT ignore it)
-!.gitignore
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+wp-content/plugins/*
+!/wp-content/plugins/core-functionality/
 
-# track .editorconfig file (i.e. do NOT ignore it)
-!.editorconfig
-
-# track readme.md in the root (i.e. do NOT ignore it)
-!readme.md
-
-# ignore all files that start with ~
-~*
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!/wp-content/themes/met-council/
 
 # ignore OS generated files
 ehthumbs.db
@@ -81,13 +64,6 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
-
-# ignore everything in the "wp-content" directory, except:
-wp-content/*
-!wp-content/plugins/core-functionality/
-# !wp-content/themes/understrap/
-!wp-content/themes/met-council/
-
 
 # ignore node/grunt dependency directories
 node_modules/
