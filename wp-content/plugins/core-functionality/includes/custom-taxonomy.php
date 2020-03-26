@@ -51,7 +51,7 @@ if ( ! function_exists( 'core_language_taxonomy' ) ) {
       'show_tagcloud'              => true,
       'show_in_rest'               => true,
     );
-    register_taxonomy( 'language', array( 'post', 'page', 'campaign', 'kbe_knowledgebase', 'knowledge-base', 'event', 'fact_sheet' ), $args );
+    register_taxonomy( 'language', array( 'post', 'page', 'campaign', 'knowledgebase', 'kbe_knowledgebase', 'event' ), $args );
 
   }
   add_action( 'init', 'core_language_taxonomy', 0 );
@@ -201,6 +201,47 @@ if ( ! function_exists( 'core_staff_taxonomy' ) ) {
 
 }
 
+// Register Knowledgebase Taxonomy
+function core_knowledgebase_category_taxonomy() {
+
+  $labels = array(
+    'name'                       => _x( 'Categories', 'Taxonomy General Name', 'core-functionality' ),
+    'singular_name'              => _x( 'Category', 'Taxonomy Singular Name', 'core-functionality' ),
+    'menu_name'                  => __( 'Categories', 'core-functionality' ),
+    'all_items'                  => __( 'All Categories', 'core-functionality' ),
+    'parent_item'                => __( 'Parent Category', 'core-functionality' ),
+    'parent_item_colon'          => __( 'Parent Category:', 'core-functionality' ),
+    'new_item_name'              => __( 'New Category Name', 'core-functionality' ),
+    'add_new_item'               => __( 'Add New Category', 'core-functionality' ),
+    'edit_item'                  => __( 'Edit Category', 'core-functionality' ),
+    'update_item'                => __( 'Update Category', 'core-functionality' ),
+    'view_item'                  => __( 'View Category', 'core-functionality' ),
+    'separate_items_with_commas' => __( 'Separate items with commas', 'core-functionality' ),
+    'add_or_remove_items'        => __( 'Add or remove items', 'core-functionality' ),
+    'choose_from_most_used'      => __( 'Choose from the most used', 'core-functionality' ),
+    'popular_items'              => __( 'Popular Categories', 'core-functionality' ),
+    'search_items'               => __( 'Search Categories', 'core-functionality' ),
+    'not_found'                  => __( 'Not Found', 'core-functionality' ),
+    'no_terms'                   => __( 'No items', 'core-functionality' ),
+    'items_list'                 => __( 'Categories list', 'core-functionality' ),
+    'items_list_navigation'      => __( 'Categories list navigation', 'core-functionality' ),
+  );
+  $args = array(
+    'labels'                     => $labels,
+    'hierarchical'               => true,
+    'public'                     => true,
+    'show_ui'                    => true,
+    'show_admin_column'          => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => true,
+    'show_in_rest'               => true,
+  );
+  register_taxonomy( 'help-category', array( 'knowledgebase' ), $args );
+}
+if ( ! function_exists( 'core_knowledgebase_category_taxonomy' ) ) {
+  // add_action( 'init', 'core_knowledgebase_category_taxonomy', 0 );
+}
+
 /**
  * Modify Knowledge Base Category Args
  *
@@ -249,7 +290,7 @@ function core_knowledge_base_category_taxonomy() {
   }
 
 }
-add_action( 'init', 'core_knowledge_base_category_taxonomy', 11 );
+// add_action( 'init', 'core_knowledge_base_category_taxonomy', 11 );
 
 /**
  * Modify Knowledge Base Tag Args

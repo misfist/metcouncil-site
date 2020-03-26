@@ -139,7 +139,7 @@ if ( ! function_exists( 'core_staff_post_type' ) ) {
     $args = array(
       'label'                 => __( 'Person', 'core-functionality' ),
       'labels'                => $labels,
-      'supports'              => array( 'title', 'editor', 'thumbnail' ),
+      'supports'              => array( 'title', 'excerpt', 'editor', 'thumbnail', 'custom-fields' ),
       'taxonomies'            => array( 'staff-category' ),
       'hierarchical'          => false,
       'public'                => true,
@@ -157,7 +157,7 @@ if ( ! function_exists( 'core_staff_post_type' ) ) {
       'show_in_rest'          => true,
       'template'              => $template,
     );
-    register_post_type( 'staff', $args );
+    register_post_type( 'staff', apply_filters( 'core_staff_args', $args ) );
 
   }
   add_action( 'init', 'core_staff_post_type', 0 );
@@ -202,7 +202,7 @@ if ( ! function_exists( 'core_program_post_type' ) ) {
   		'label'                 => __( 'Program', 'core-functionality' ),
   		'description'           => __( '', 'core-functionality' ),
   		'labels'                => $labels,
-  		'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+  		'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
   		'taxonomies'            => array( 'program-category' ),
   		'hierarchical'          => false,
   		'public'                => true,
@@ -219,11 +219,89 @@ if ( ! function_exists( 'core_program_post_type' ) ) {
   		'capability_type'       => 'page',
       'show_in_rest'          => true,
   	);
-  	register_post_type( 'program', $args );
+  	register_post_type( 'program', apply_filters( 'core_program_args', $args ) );
 
   }
   add_action( 'init', 'core_program_post_type', 0 );
 
+}
+
+// Register Knowledgebase
+function core_knowledgebase_post_type() {
+
+  $labels = array(
+    'name'                  => _x( 'Help Articles', 'Post Type General Name', 'core-functionality' ),
+    'singular_name'         => _x( 'Help & Answers', 'Post Type Singular Name', 'core-functionality' ),
+    'menu_name'             => __( 'Help & Answers', 'core-functionality' ),
+    'name_admin_bar'        => __( 'Help & Answers', 'core-functionality' ),
+    'archives'              => __( 'Help & Answers Archives', 'core-functionality' ),
+    'attributes'            => __( 'Article Attributes', 'core-functionality' ),
+    'parent_item_colon'     => __( 'Parent Article:', 'core-functionality' ),
+    'all_items'             => __( 'All Articles', 'core-functionality' ),
+    'add_new_item'          => __( 'Add New Article', 'core-functionality' ),
+    'add_new'               => __( 'Add New', 'core-functionality' ),
+    'new_item'              => __( 'New Articles', 'core-functionality' ),
+    'edit_item'             => __( 'Edit Articles', 'core-functionality' ),
+    'update_item'           => __( 'Update Articles', 'core-functionality' ),
+    'view_item'             => __( 'View Articles', 'core-functionality' ),
+    'view_items'            => __( 'View Articles', 'core-functionality' ),
+    'search_items'          => __( 'Search Articles', 'core-functionality' ),
+    'not_found'             => __( 'Not found', 'core-functionality' ),
+    'not_found_in_trash'    => __( 'Not found in Trash', 'core-functionality' ),
+    'featured_image'        => __( 'Featured Image', 'core-functionality' ),
+    'set_featured_image'    => __( 'Set featured image', 'core-functionality' ),
+    'remove_featured_image' => __( 'Remove featured image', 'core-functionality' ),
+    'use_featured_image'    => __( 'Use as featured image', 'core-functionality' ),
+    'insert_into_item'      => __( 'Insert into help article', 'core-functionality' ),
+    'uploaded_to_this_item' => __( 'Uploaded to this help article', 'core-functionality' ),
+    'items_list'            => __( 'Articles list', 'core-functionality' ),
+    'items_list_navigation' => __( 'Articles list navigation', 'core-functionality' ),
+    'filter_items_list'     => __( 'Filter help articles list', 'core-functionality' ),
+  );
+  $rewrite = array(
+    'slug'                  => 'help-answers',
+    'with_front'            => true,
+    'pages'                 => true,
+    'feeds'                 => true,
+  );
+  $args = array(
+    'label'                 => __( 'Help & Answers', 'core-functionality' ),
+    'description'           => __( '', 'core-functionality' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+    'taxonomies'            => array( 'help-category' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 15,
+    'menu_icon'             => 'dashicons-lightbulb',
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'query_var'             => 'help-answers',
+    'rewrite'               => $rewrite,
+    'capability_type'       => 'page',
+    'show_in_rest'          => true,
+    'template' => array(
+      array( 'corefunctionality/translation-title', array(
+        'placeholder' => __( 'Add Translation Title...', 'core-functionality' ),
+      ) ),
+      array( 'corefunctionality/summary', array(
+        'placeholder' => __( 'Add Intro...', 'core-functionality' ),
+      ) ),
+      array( 'core/paragraph', array(
+        'placeholder' => __( 'Add content...', 'core-functionality' ),
+      ) ),
+    ),
+  );
+  register_post_type( 'knowledgebase', apply_filters( 'core_knowledgebase_args', $args ) );
+}
+if ( ! function_exists( 'core_knowledgebase_post_type' ) ) {
+  // add_action( 'init', 'core_knowledgebase_post_type', 0 );
 }
 
 /**
@@ -238,7 +316,19 @@ function core_kb_register_post_type_args( $args, $post_type ) {
 
 	if ( 'kbe_knowledgebase' !== $post_type ) {
 		return $args;
-	}
+  }
+  
+  $template = array(
+    array( 'corefunctionality/translation-title', array(
+      'placeholder' => __( 'Add Translation Title...', 'core-functionality' ),
+    ) ),
+    array( 'corefunctionality/summary', array(
+      'placeholder' => __( 'Add Summary...', 'core-functionality' ),
+    ) ),
+    array( 'core/paragraph', array(
+      'placeholder' => __( 'Add content...', 'core-functionality' ),
+    ) ),
+  );
 
   $labels = array(
     'name'                  => _x( 'Help & Answers', 'Post Type General Name', 'core-functionality' ),
@@ -287,17 +377,7 @@ function core_kb_register_post_type_args( $args, $post_type ) {
     'capability_type'       => 'page',
     'menu_icon'             => 'dashicons-lightbulb',
     'show_in_rest'          => true,
-    'template' => array(
-      array( 'corefunctionality/translation-title', array(
-        'placeholder' => __( 'Add Translation Title...', 'core-functionality' ),
-      ) ),
-      array( 'corefunctionality/intro', array(
-        'placeholder' => __( 'Add Intro...', 'core-functionality' ),
-      ) ),
-      array( 'core/paragraph', array(
-        'placeholder' => __( 'Add content...', 'core-functionality' ),
-      ) ),
-    ),
+    'template'              => $template,
   );
 
 	return array_merge( $args, $custom_args );
