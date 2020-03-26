@@ -15,8 +15,21 @@ import './editor.scss';
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { registerBlockType } = wp.blocks;
-const { InspectorControls } = wp.editor;
+const {
+    InspectorControls,
+    URLInput,
+    InnerBlocks,
+    RichText
+} = wp.blockEditor;
 const { TextControl, PanelBody } = wp.components;
+
+const blockAttributes = {
+	text: {
+		type: 'string',
+		source: 'meta',
+		meta: 'translated_title'
+	}
+};
 
 /**
  * Register: aa Gutenberg Block.
@@ -43,13 +56,7 @@ registerBlockType( 'corefunctionality/translation-title', {
 		__( 'translation title' ),
 		__( 'custom field' ),
 	],
-	attributes: {
-		text: {
-			type: 'string',
-			source: 'meta',
-			meta: 'translated_title'
-		}
-	},
+	attributes: blockAttributes,
 
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
@@ -62,11 +69,12 @@ registerBlockType( 'corefunctionality/translation-title', {
 	edit: props => {
 		const { attributes: { text }, className, setAttributes, isSelected } = props;
 		return (
-			<TextControl
-				label={ __( 'Translation Title', 'core-functionality' ) }
-				value={ text }
-				description={ __( 'If this post is a translation, please enter the non-English title.', 'core-functionality' ) }
-				onChange={ text => setAttributes( { text } ) }
+			<RichText
+				tagName="h1"
+				className="entry-title__translation"
+				value={text}
+				placeholder={ __( 'Add non-English title, if this is a translation.', 'core-functionality' ) }
+				onChange={ ( text ) => setAttributes( { text } ) }
 			/>
 		);
 	},
