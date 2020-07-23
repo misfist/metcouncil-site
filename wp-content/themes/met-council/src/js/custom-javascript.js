@@ -6,8 +6,6 @@
         }
     } );
 
-    console.log( clipboard );
-
     clipboard.on('success', function( event ) {
         console.info( 'Action:', event.action );
         console.info( 'Text:', event.text );
